@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="utf-8">
@@ -21,17 +21,16 @@
     <link rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff">
 	
 	<!-- Styles -->
-    <link href="assets/css/lib/font-awesome.min.css" rel="stylesheet">
-    <link href="assets/css/lib/themify-icons.css" rel="stylesheet">
-    <link href="assets/css/lib/owl.carousel.min.css" rel="stylesheet" />
-    <link href="assets/css/lib/owl.theme.default.min.css" rel="stylesheet" />
-    <link href="assets/css/lib/weather-icons.css" rel="stylesheet" />
-    <link href="assets/css/lib/mmc-chat.css" rel="stylesheet" />
-    <link href="assets/css/lib/sidebar.css" rel="stylesheet">
-    <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/lib/simdahs.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
-
+    <link th:href="@{css/lib/font-awesome.min.css}" rel="stylesheet">
+    <link th:href="@{css/lib/themify-icons.css}" rel="stylesheet">
+    <link th:href="@{css/lib/owl.carousel.min.css}" rel="stylesheet" />
+    <link th:href="@{css/lib/owl.theme.default.min.css}" rel="stylesheet" />
+    <link th:href="@{css/lib/weather-icons.css}" rel="stylesheet" />
+    <link th:href="@{css/lib/mmc-chat.css}" rel="stylesheet" />
+    <link th:href="@{css/lib/sidebar.css}" rel="stylesheet">
+    <link th:href="@{css/lib/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{css/lib/simdahs.css}" rel="stylesheet">
+    <link th:href="@{css/style.css}" rel="stylesheet">
 
 </head>
 
@@ -42,33 +41,33 @@
             <div class="nano-content">
                 <ul>
 					<li class="label">Main</li>
-                    <li class="active"><a href="index.html"><i class="ti-home"></i> 主页 </a></li>	
-                    <li><a href="app-profile.html"><i class="ti-user"></i> 个人信息</a></li>
+                    <li class="active"><a th:href="@{/index}"><i class="ti-home"></i> 主页 </a></li>
+                    <li><a th:href="@{/app-profile}"><i class="ti-user"></i> 个人信息</a></li>
 					<li class="label">工作</li>
 					<li><a class="sidebar-sub-toggle"><i class="ti-heart"></i> 医疗服务 <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
-                            <li><a href="new_record.html">新开病例</a></li>
-                            <li><a href="new_prescription.html">新开处方</a></li>
+                            <li><a th:href="@{/new_record}">新开病例</a></li>
+                            <li><a th:href="@{/new_prescription}">新开处方</a></li>
                         </ul>
                     </li>
 					<li><a class="sidebar-sub-toggle"><i class="ti-wheelchair"></i> 病人信息查询 <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
-                            <li><a href="search_personalInfo.html">个人信息</a></li>
-                            <li><a href="search_prescription.html">处方记录</a></li>
-                            <li><a href="search_record.html">病例记录</a></li>
+                            <li><a th:href="@{/search_personalInfo}">个人信息</a></li>
+                            <li><a th:href="@{/search_prescription}">处方记录</a></li>
+                            <li><a th:href="@{/search_record}">病例记录</a></li>
                         </ul>
                     </li>			
                     <li><a class="sidebar-sub-toggle"><i class="ti-pencil-alt"></i> 医院信息查询 <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
-                            <li><a href="search_medicine.html">药品情况</a></li>
+                            <li><a th:href="@{/search_medicine}">药品情况</a></li>
                         </ul>
                     </li>			
 					<li class="label">账户</li>
 					<li><a class="sidebar-sub-toggle"><i class="ti-target"></i> 账户管理 <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
-                            <li><a href="page-login.html">重新登录</a></li>
-                            <li><a href="page-register.html">注册</a></li>
-                            <li><a href="page-reset-password.html">更改密码</a></li>
+                            <li><a th:href="@{/page-login}">重新登录</a></li>
+                            <li><a th:href="@{/page-register}">注册</a></li>
+                            <li><a th:href="@{/page-reset-password}">更改密码</a></li>
                         </ul>
                     </li>
 					
@@ -85,8 +84,8 @@
         <div class="pull-left">
             <div class="logo" id="sideLogo">
                 <a href="index.html">
-                    <img class="full-logo" src="assets/images/logo_big.png" alt="SimDahs">
-                    <img class="small-logo" src="assets/images/logo-small.png" alt="SimDahs">
+                    <img class="full-logo" th:src="@{images/logo_big.png}" alt="SimDahs">
+                    <img class="small-logo" th:src="@{images/logo-small.png}" alt="SimDahs">
                 </a>
             </div>
             <div class="hamburger sidebar-toggle">
@@ -105,7 +104,7 @@
                             <ul>
                                 <li>
                                     <a href="#">
-                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />
+                                        <img class="pull-left m-r-10 avatar-img" th:src="@{images/avatar/3.jpg}" alt="" />
                                         <div class="notification-content">
                                             <small class="notification-timestamp pull-right">02:34 PM</small>
                                             <div class="notification-heading">王院长</div>
@@ -116,7 +115,7 @@
 
                                 <li>
                                     <a href="#">
-                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />
+                                        <img class="pull-left m-r-10 avatar-img" th:src="@{images/avatar/3.jpg}" alt="" />
                                         <div class="notification-content">
                                             <small class="notification-timestamp pull-right">02:34 PM</small>
                                             <div class="notification-heading">Sofiya</div>
@@ -127,7 +126,7 @@
 
                                 <li>
                                     <a href="#">
-                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />
+                                        <img class="pull-left m-r-10 avatar-img" th:src="@{images/avatar/3.jpg}" alt="" />
                                         <div class="notification-content">
                                             <small class="notification-timestamp pull-right">02:34 PM</small>
                                             <div class="notification-heading">Richard</div>
@@ -138,7 +137,7 @@
 
                                 <li>
                                     <a href="#">
-                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />
+                                        <img class="pull-left m-r-10 avatar-img" th:src="@{images/avatar/3.jpg}" alt="" />
                                         <div class="notification-content">
                                             <small class="notification-timestamp pull-right">02:34 PM</small>
                                             <div class="notification-heading">Sara Maggi</div>
@@ -157,13 +156,13 @@
                     <div class="drop-down">
                         <div class="dropdown-content-heading">
                             <span class="text-left">2 New Messages</span>
-                            <a href="email.html"><i class="ti-pencil-alt pull-right"></i></a>
+                            <a th:href="@{/email}"><i class="ti-pencil-alt pull-right"></i></a>
                         </div>
                         <div class="dropdown-content-body">
                             <ul>
                                 <li class="notification-unread">
                                     <a href="#">
-                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/1.jpg" alt="" />
+                                        <img class="pull-left m-r-10 avatar-img" th:src="@{images/avatar/1.jpg}" alt="" />
                                         <div class="notification-content">
                                             <small class="notification-timestamp pull-right">02:34 PM</small>
                                             <div class="notification-heading">John Doe</div>
@@ -174,7 +173,7 @@
 
                                 <li class="notification-unread">
                                     <a href="#">
-                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/2.jpg" alt="" />
+                                        <img class="pull-left m-r-10 avatar-img" th:src="@{images/avatar/2.jpg}" alt="" />
                                         <div class="notification-content">
                                             <small class="notification-timestamp pull-right">02:34 PM</small>
                                             <div class="notification-heading">Sara Maggi</div>
@@ -185,7 +184,7 @@
 
                                 <li>
                                     <a href="#">
-                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />
+                                        <img class="pull-left m-r-10 avatar-img" th:src="@{images/avatar/3.jpg}" alt="" />
                                         <div class="notification-content">
                                             <small class="notification-timestamp pull-right">02:34 PM</small>
                                             <div class="notification-heading">John Doe</div>
@@ -196,7 +195,7 @@
 
                                 <li>
                                     <a href="#">
-                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/2.jpg" alt="" />
+                                        <img class="pull-left m-r-10 avatar-img" th:src="@{images/avatar/2.jpg}" alt="" />
                                         <div class="notification-content">
                                             <small class="notification-timestamp pull-right">02:34 PM</small>
                                             <div class="notification-heading">Sara Maggi</div>
@@ -211,7 +210,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="header-icon dib"><img class="avatar-img" src="assets/images/avatar/1.jpg" alt="" /> <span class="user-avatar">Wolf <i class="ti-angle-down f-s-10"></i></span>
+                <li class="header-icon dib"><img class="avatar-img" th:src="@{images/avatar/1.jpg}" alt="" /> <span class="user-avatar">[[${session.username}]] <i class="ti-angle-down f-s-10"></i></span>
                     <div class="drop-down dropdown-profile">
                         <div class="dropdown-content-body">
                             <ul>
@@ -345,7 +344,7 @@
                                                     <div class="testimonial-text">
                                                     <i class="fa fa-quote-left"></i> 健康所系，性命相托。当我步入神圣医学学府的时刻，谨庄严宣誓：我志愿献身医学，热爱祖国，忠于人民，恪守医德，尊师守纪，刻苦钻研，孜孜不倦，精益求精，全面发展。我决心竭尽全力除人类之病痛，助健康之完美，维护医术的圣洁和荣誉，救死扶伤，不辞艰辛，执着追求，为祖国医药卫生事业的发展和人类身心健康奋斗终生。                                                    <i class="fa fa-quote-right"></i>
                                                     </div>
-                                                    <img class="testimonial-author-img" src="assets/images/avatar/1.jpg" alt="" />
+                                                    <img class="testimonial-author-img" th:src="@{images/avatar/1.jpg}" alt="" />
                                                     <div class="testimonial-author">————《医学生誓言》</div>
                                                 </div>
                                             </div>
@@ -354,7 +353,7 @@
                                                     <div class="testimonial-text">
                                                     <i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <i class="fa fa-quote-right"></i>
                                                     </div>
-                                                    <img class="testimonial-author-img" src="assets/images/avatar/1.jpg" alt="" />
+                                                    <img class="testimonial-author-img" th:src="@{images/avatar/1.jpg}" alt="" />
                                                     <div class="testimonial-author">TYRION LANNISTER</div>
                                                     <div class="testimonial-author-position">Founder-Ceo. Dell Corp</div>
                                                 </div>
@@ -364,7 +363,7 @@
                                                     <div class="testimonial-text">
                                                     <i class="fa fa-quote-left"></i> 医生是我们文明世界的精华。<i class="fa fa-quote-right"></i>
                                                     </div>
-                                                    <img class="testimonial-author-img" src="assets/images/avatar/1.jpg" alt="" />
+                                                    <img class="testimonial-author-img" th:src="@{images/avatar/1.jpg}" alt="" />
                                                     <div class="testimonial-author">————罗·路·史蒂文森 </div>
                                                 </div>
                                             </div>
@@ -375,7 +374,7 @@
                                                     一个医生,不是为自己的名誉工作,他的价值, 远比那五花八门的名誉更神圣更金贵棗驱除瘟疫,用欢乐代替痛苦。
                                                     <i class="fa fa-quote-right"></i>
                                                     </div>
-                                                    <img class="testimonial-author-img" src="assets/images/avatar/1.jpg" alt="" />
+                                                    <img class="testimonial-author-img" th:src="@{images/avatar/1.jpg}" alt="" />
                                                     <div class="testimonial-author">————张海迪</div>
                                                 </div>
                                             </div>
@@ -385,8 +384,8 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="thumbnail">
-                                    <a href="assets/images/lights.jpg">
-                                        <img src="assets/images/lights.jpg" alt="Lights" style="width:100%">
+                                    <a th:href="@{images/lights.jpg}">
+                                        <img th:src="@{images/lights.jpg}" alt="Lights" style="width:100%">
                                         <div class="caption">
                                             <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
                                         </div>
@@ -411,7 +410,7 @@
                                 <div class="recent-comment">
 									<div class="media">
 										<div class="media-left">
-											<a href="#"><img class="media-object" src="assets/images/avatar/1.jpg" alt="..."></a>
+											<a href="#"><img class="media-object" th:src="@{images/avatar/1.jpg}" alt="..."></a>
 										</div>
 										<div class="media-body">
 											<h4 class="media-heading">王弼</h4>
@@ -421,7 +420,7 @@
                                     </div>
 									<div class="media">
 										<div class="media-left">
-											<a href="#"><img class="media-object" src="assets/images/avatar/2.jpg" alt="..."></a>
+											<a href="#"><img class="media-object" th:src="@{images/avatar/2.jpg}" alt="..."></a>
 										</div>
 										<div class="media-body">
 											<h4 class="media-heading">陆航</h4>
@@ -431,7 +430,7 @@
 									</div>
                                     <div class="media">
 										<div class="media-left">
-											<a href="#"><img class="media-object" src="assets/images/avatar/3.jpg" alt="..."></a>
+											<a href="#"><img class="media-object" th:src="@{images/avatar/3.jpg}" alt="..."></a>
 										</div>
 										<div class="media-body">
 											<h4 class="media-heading">刘畅</h4>
@@ -441,7 +440,7 @@
 									</div>
                                     <div class="media">
 										<div class="media-left">
-											<a href="#"><img class="media-object" src="assets/images/avatar/1.jpg" alt="..."></a>
+											<a href="#"><img class="media-object" th:src="@{images/avatar/1.jpg}" alt="..."></a>
 										</div>
 										<div class="media-body">
 											<h4 class="media-heading">张倩</h4>
@@ -451,7 +450,7 @@
 									</div>
                                     <div class="media">
 										<div class="media-left">
-											<a href="#"><img class="media-object" src="assets/images/avatar/2.jpg" alt="..."></a>
+											<a href="#"><img class="media-object" th:src="@{images/avatar/2.jpg}" alt="..."></a>
 										</div>
 										<div class="media-body">
 											<h4 class="media-heading">骆飞</h4>
@@ -478,7 +477,7 @@
                                 <div class="recent-comment">
 									<div class="media">
 										<div class="media-left">
-											<a href="#"><img class="media-object" src="assets/images/avatar/1.jpg" alt="..."></a>
+											<a href="#"><img class="media-object" th:src="@{images/avatar/1.jpg}" alt="..."></a>
 										</div>
 										<div class="media-body">
 											<h4 class="media-heading">李强</h4>
@@ -493,7 +492,7 @@
 									</div>
                                     <div class="media">
 										<div class="media-left">
-											<a href="#"><img class="media-object" src="assets/images/avatar/2.jpg" alt="..."></a>
+											<a href="#"><img class="media-object" th:src="@{images/avatar/2.jpg}" alt="..."></a>
 										</div>
 										<div class="media-body">
 											<h4 class="media-heading">赵慧</h4>
@@ -508,7 +507,7 @@
 									</div>
                                     <div class="media">
 										<div class="media-left">
-											<a href="#"><img class="media-object" src="assets/images/avatar/3.jpg" alt="..."></a>
+											<a href="#"><img class="media-object" th:src="@{images/avatar/3.jpg}" alt="..."></a>
 										</div>
 										<div class="media-body">
 											<h4 class="media-heading">王璐</h4>
@@ -538,7 +537,7 @@
                                 <div class="recent-comment">
 									<div class="media">
 										<div class="media-left">
-											<a href="#"><img class="media-object" src="assets/images/avatar/1.jpg" alt="..."></a>
+											<a href="#"><img class="media-object" th:src="@{images/avatar/1.jpg}" alt="..."></a>
 										</div>
 										<div class="media-body">
 											<h4 class="media-heading">李强</h4>
@@ -551,7 +550,7 @@
 									</div>
                                     <div class="media">
 										<div class="media-left">
-											<a href="#"><img class="media-object" src="assets/images/avatar/1.jpg" alt="..."></a>
+											<a href="#"><img class="media-object" th:src="@{images/avatar/1.jpg}" alt="..."></a>
 										</div>
 										<div class="media-body">
 											<h4 class="media-heading">王东</h4>
@@ -564,7 +563,7 @@
 									</div>
                                     <div class="media">
 										<div class="media-left">
-											<a href="#"><img class="media-object" src="assets/images/avatar/1.jpg" alt="..."></a>
+											<a href="#"><img class="media-object" th:src="@{images/avatar/1.jpg}" alt="..."></a>
 										</div>
 										<div class="media-body">
 											<h4 class="media-heading">赵四</h4>
@@ -587,31 +586,31 @@
 	
 	
 	
-    <script src="assets/js/lib/jquery.min.js"></script><!-- jquery vendor -->
-    <script src="assets/js/lib/jquery.nanoscroller.min.js"></script><!-- nano scroller -->    
-    <script src="assets/js/lib/sidebar.js"></script><!-- sidebar -->
-    <script src="assets/js/lib/bootstrap.min.js"></script><!-- bootstrap -->
-    <script src="assets/js/lib/mmc-common.js"></script>
-    <script src="assets/js/lib/mmc-chat.js"></script>
+    <script th:src="@{js/lib/jquery.min.js}"></script><!-- jquery vendor -->
+    <script th:src="@{js/lib/jquery.nanoscroller.min.js}"></script><!-- nano scroller -->
+    <script th:src="@{js/lib/sidebar.js}"></script><!-- sidebar -->
+    <script th:src="@{js/lib/bootstrap.min.js}"></script><!-- bootstrap -->
+    <script th:src="@{js/lib/mmc-common.js}"></script>
+    <script th:src="@{js/lib/mmc-chat.js}"></script>
 	<!--  Chart js -->
-	<script src="assets/js/lib/chart-js/Chart.bundle.js"></script>
-	<script src="assets/js/lib/chart-js/chartjs-init.js"></script>
+	<script th:src="@{js/lib/chart-js/Chart.bundle.js}"></script>
+	<script th:src="@{js/lib/chart-js/chartjs-init.js}"></script>
 	<!-- // Chart js -->
 
 
-    <script src="assets/js/lib/sparklinechart/jquery.sparkline.min.js"></script><!-- scripit init-->
-    <script src="assets/js/lib/sparklinechart/sparkline.init.js"></script><!-- scripit init-->
+    <script th:src="@{js/lib/sparklinechart/jquery.sparkline.min.js}"></script><!-- scripit init-->
+    <script th:src="@{js/lib/sparklinechart/sparkline.init.js}"></script><!-- scripit init-->
 	
 	<!--  Datamap -->
-    <script src="assets/js/lib/datamap/d3.min.js"></script>
-    <script src="assets/js/lib/datamap/topojson.js"></script>
-    <script src="assets/js/lib/datamap/datamaps.world.min.js"></script>
-    <script src="assets/js/lib/datamap/datamap-init.js"></script>
+    <script th:src="@{js/lib/datamap/d3.min.js}"></script>
+    <script th:src="@{js/lib/datamap/topojson.js}"></script>
+    <script th:src="@{js/lib/datamap/datamaps.world.min.js}"></script>
+    <script th:src="@{js/lib/datamap/datamap-init.js}"></script>
 	<!-- // Datamap -->-->
-    <script src="assets/js/lib/weather/jquery.simpleWeather.min.js"></script>	
-    <script src="assets/js/lib/weather/weather-init.js"></script>
-    <script src="assets/js/lib/owl-carousel/owl.carousel.min.js"></script>
-    <script src="assets/js/lib/owl-carousel/owl.carousel-init.js"></script>
-    <script src="assets/js/scripts.js"></script><!-- scripit init-->
+    <script th:src="@{js/lib/weather/jquery.simpleWeather.min.js}"></script>
+    <script th:src="@{js/lib/weather/weather-init.js}"></script>
+    <script th:src="@{js/lib/owl-carousel/owl.carousel.min.js}"></script>
+    <script th:src="@{js/lib/owl-carousel/owl.carousel-init.js}"></script>
+    <script th:src="@{js/scripts.js}"></script><!-- scripit init-->
 </body>
 </html>

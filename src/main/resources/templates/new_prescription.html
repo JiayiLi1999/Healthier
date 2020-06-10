@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="utf-8">
@@ -21,13 +21,13 @@
     <link rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff">
 	
 	<!-- Styles -->
-    <link href="assets/css/lib/font-awesome.min.css" rel="stylesheet">
-    <link href="assets/css/lib/themify-icons.css" rel="stylesheet">
-    <link href="assets/css/lib/mmc-chat.css" rel="stylesheet" />
-    <link href="assets/css/lib/sidebar.css" rel="stylesheet">
-    <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/lib/simdahs.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link th:href="@{css/lib/font-awesome.min.css}" rel="stylesheet">
+    <link th:href="@{css/lib/themify-icons.css}" rel="stylesheet">
+    <link th:href="@{css/lib/mmc-chat.css}" rel="stylesheet" />
+    <link th:href="@{css/lib/sidebar.css}" rel="stylesheet">
+    <link th:href="@{css/lib/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{css/lib/simdahs.css}" rel="stylesheet">
+    <link th:href="@{css/style.css}" rel="stylesheet">
 </head>
 
 <body>
@@ -37,33 +37,33 @@
             <div class="nano-content">
                 <ul>
 					<li class="label">Main</li>
-                    <li class="active"><a href="index.html"><i class="ti-home"></i> 主页 </a></li>	
-                    <li><a href="app-profile.html"><i class="ti-user"></i> 个人信息</a></li>
+                    <li><a th:href="@{index}"><i class="ti-home"></i> 主页 </a></li>
+                    <li><a th:href="@{app-profile}"><i class="ti-user"></i> 个人信息</a></li>
 					<li class="label">工作</li>
-					<li><a class="sidebar-sub-toggle"><i class="ti-heart"></i> 医疗服务 <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+					<li class="active open"><a class="sidebar-sub-toggle"><i class="ti-heart"></i> 医疗服务 <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
-                            <li><a href="new_record.html">新开病例</a></li>
-                            <li><a href="new_prescription.html">新开处方</a></li>
+                            <li><a th:href="@{new_record}">新开病例</a></li>
+                            <li class="active"><a th:href="@{new_prescription}">新开处方</a></li>
                         </ul>
                     </li>
 					<li><a class="sidebar-sub-toggle"><i class="ti-wheelchair"></i> 病人信息查询 <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
-                            <li><a href="search_personalInfo.html">个人信息</a></li>
-                            <li><a href="search_prescription.html">处方记录</a></li>
-                            <li><a href="search_record.html">病例记录</a></li>
+                            <li><a th:href="@{search_personalInfo}">个人信息</a></li>
+                            <li><a th:href="@{search_prescription}">处方记录</a></li>
+                            <li><a th:href="@{search_record}">病例记录</a></li>
                         </ul>
                     </li>			
                     <li><a class="sidebar-sub-toggle"><i class="ti-pencil-alt"></i> 医院信息查询 <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
-                            <li><a href="search_medicine.html">药品情况</a></li>
+                            <li><a th:href="@{search_medicine}">药品情况</a></li>
                         </ul>
                     </li>			
 					<li class="label">账户</li>
 					<li><a class="sidebar-sub-toggle"><i class="ti-target"></i> 账户管理 <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
-                            <li><a href="page-login.html">重新登录</a></li>
-                            <li><a href="page-register.html">注册</a></li>
-                            <li><a href="page-reset-password.html">更改密码</a></li>
+                            <li><a th:href="@{page-login}">重新登录</a></li>
+                            <li><a th:href="@{page-register}">注册</a></li>
+                            <li><a th:href="@{page-reset-password}">更改密码</a></li>
                         </ul>
                     </li>
 					
@@ -79,9 +79,9 @@
     <div class="header">
         <div class="pull-left">
             <div class="logo" id="sideLogo">
-                <a href="index.html">
-                    <img class="full-logo" src="assets/images/logo_big.png" alt="SimDahs">
-                    <img class="small-logo" src="assets/images/logo-small.png" alt="SimDahs">
+                <a th:href="@{index}">
+                    <img class="full-logo" th:src="@{images/logo_big.png}" alt="SimDahs">
+                    <img class="small-logo" th:src="@{images/logo-small.png}" alt="SimDahs">
                 </a>
             </div>
             <div class="hamburger sidebar-toggle">
@@ -100,7 +100,7 @@
                             <ul>
                                 <li>
                                     <a href="#">
-                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />
+                                        <img class="pull-left m-r-10 avatar-img" th:src="@{images/avatar/3.jpg}" alt="" />
                                         <div class="notification-content">
                                             <small class="notification-timestamp pull-right">02:34 PM</small>
                                             <div class="notification-heading">王院长</div>
@@ -111,7 +111,7 @@
 
                                 <li>
                                     <a href="#">
-                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />
+                                        <img class="pull-left m-r-10 avatar-img" th:src="@{images/avatar/3.jpg}" alt="" />
                                         <div class="notification-content">
                                             <small class="notification-timestamp pull-right">02:34 PM</small>
                                             <div class="notification-heading">Sofiya</div>
@@ -122,7 +122,7 @@
 
                                 <li>
                                     <a href="#">
-                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />
+                                        <img class="pull-left m-r-10 avatar-img" th:src="@{images/avatar/3.jpg}" alt="" />
                                         <div class="notification-content">
                                             <small class="notification-timestamp pull-right">02:34 PM</small>
                                             <div class="notification-heading">Richard</div>
@@ -133,7 +133,7 @@
 
                                 <li>
                                     <a href="#">
-                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />
+                                        <img class="pull-left m-r-10 avatar-img" th:src="@{images/avatar/3.jpg}" alt="" />
                                         <div class="notification-content">
                                             <small class="notification-timestamp pull-right">02:34 PM</small>
                                             <div class="notification-heading">Sara Maggi</div>
@@ -152,13 +152,13 @@
                     <div class="drop-down">
                         <div class="dropdown-content-heading">
                             <span class="text-left">2 New Messages</span>
-                            <a href="email.html"><i class="ti-pencil-alt pull-right"></i></a>
+                            <a th:href="@{email}"><i class="ti-pencil-alt pull-right"></i></a>
                         </div>
                         <div class="dropdown-content-body">
                             <ul>
                                 <li class="notification-unread">
                                     <a href="#">
-                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/1.jpg" alt="" />
+                                        <img class="pull-left m-r-10 avatar-img" th:src="@{images/avatar/1.jpg}" alt="" />
                                         <div class="notification-content">
                                             <small class="notification-timestamp pull-right">02:34 PM</small>
                                             <div class="notification-heading">John Doe</div>
@@ -169,7 +169,7 @@
 
                                 <li class="notification-unread">
                                     <a href="#">
-                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/2.jpg" alt="" />
+                                        <img class="pull-left m-r-10 avatar-img" th:src="@{images/avatar/2.jpg}" alt="" />
                                         <div class="notification-content">
                                             <small class="notification-timestamp pull-right">02:34 PM</small>
                                             <div class="notification-heading">Sara Maggi</div>
@@ -180,7 +180,7 @@
 
                                 <li>
                                     <a href="#">
-                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />
+                                        <img class="pull-left m-r-10 avatar-img" th:src="@{images/avatar/3.jpg}" alt="" />
                                         <div class="notification-content">
                                             <small class="notification-timestamp pull-right">02:34 PM</small>
                                             <div class="notification-heading">John Doe</div>
@@ -191,7 +191,7 @@
 
                                 <li>
                                     <a href="#">
-                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/2.jpg" alt="" />
+                                        <img class="pull-left m-r-10 avatar-img" th:src="@{images/avatar/2.jpg}" alt="" />
                                         <div class="notification-content">
                                             <small class="notification-timestamp pull-right">02:34 PM</small>
                                             <div class="notification-heading">Sara Maggi</div>
@@ -206,7 +206,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="header-icon dib"><img class="avatar-img" src="assets/images/avatar/1.jpg" alt="" /> <span class="user-avatar">Wolf <i class="ti-angle-down f-s-10"></i></span>
+                <li class="header-icon dib"><img class="avatar-img" th:src="@{images/avatar/1.jpg}" alt="" /> <span class="user-avatar">[[${session.username}]] <i class="ti-angle-down f-s-10"></i></span>
                     <div class="drop-down dropdown-profile">
                         <div class="dropdown-content-body">
                             <ul>
@@ -234,7 +234,7 @@
                     <div class="col-lg-8 p-0">
                         <div class="page-header">
                             <div class="page-title">
-                                <h1>新开病例</h1>
+                                <h1>新开处方</h1>
                             </div>
                         </div>
                     </div><!-- /# column -->
@@ -426,13 +426,13 @@
 
 
 
-    <script src="assets/js/lib/jquery.min.js"></script><!-- jquery vendor -->
-    <script src="assets/js/lib/jquery.nanoscroller.min.js"></script><!-- nano scroller -->
-    <script src="assets/js/lib/sidebar.js"></script><!-- sidebar -->
-    <script src="assets/js/lib/bootstrap.min.js"></script><!-- bootstrap -->
-    <script src="assets/js/lib/mmc-common.js"></script>
-    <script src="assets/js/lib/mmc-chat.js"></script>
-    <script src="assets/js/scripts.js"></script><!-- scripit init-->
+    <script th:src="@{js/lib/jquery.min.js}"></script><!-- jquery vendor -->
+    <script th:src="@{js/lib/jquery.nanoscroller.min.js}"></script><!-- nano scroller -->
+    <script th:src="@{js/lib/sidebar.js}"></script><!-- sidebar -->
+    <script th:src="@{js/lib/bootstrap.min.js}"></script><!-- bootstrap -->
+    <script th:src="@{js/lib/mmc-common.js}"></script>
+    <script th:src="@{js/lib/mmc-chat.js}"></script>
+    <script th:src="@{js/scripts.js}"></script><!-- scripit init-->
 
 
     

@@ -16,9 +16,9 @@ import java.util.List;
 @Repository
 public interface HospitalMapper {
 
-    //查询所有医院
-    List<Hospital> selectAllHospital();
-    //添加一个医院
-    int addHospital(Hospital hospital);
+//    //查询所有医院
+//    List<Hospital> selectAllHospital();
+//    //添加一个医院
+//    int addHospital(Hospital hospital);
 
 }

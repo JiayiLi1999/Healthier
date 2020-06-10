@@ -15,9 +15,16 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 public class Hospital {
+     private Integer hospitalId;
+     private String hospitalName;
+     private Integer doctorNum;
 
-     private Integer hospitalid;
-     private String hospitalname;
-     private Integer doctornum;
-
+     @Override
+     public String toString() {
+          return "Hospital{" +
+                  "hospitalId=" + hospitalId +
+                  ", hospitalName='" + hospitalName + '\'' +
+                  ", doctorNum=" + doctorNum +
+                  '}';
+     }
 }

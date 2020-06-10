@@ -1,5 +1,6 @@
 package com.sufer.mapper;
 
+import com.sufer.pojo.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
@@ -14,5 +15,7 @@ import org.springframework.stereotype.Repository;
 public interface UserMapper {
 
 
-
+    User selectPasswordByName(String userName, String password);
+    User selectPasswordByEmail(String userEmail, String password);
+    int addUser(String userName, String userEmail, String password);
 }

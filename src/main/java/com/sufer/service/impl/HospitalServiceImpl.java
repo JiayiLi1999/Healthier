@@ -16,16 +16,16 @@ import java.util.List;
 public class HospitalServiceImpl implements HospitalService {
 
 
-    @Autowired
-    private HospitalMapper hospitalMapper;
-
-    @Override
-    public List<Hospital> selectAllHospital() {
-        return hospitalMapper.selectAllHospital();
-    }
-
-    @Override
-    public int addHospital(Hospital hospital) {
-        return hospitalMapper.addHospital(hospital);
-    }
+//    @Autowired
+//    private HospitalMapper hospitalMapper;
+//
+//    @Override
+//    public List<Hospital> selectAllHospital() {
+//        return hospitalMapper.selectAllHospital();
+//    }
+//
+//    @Override
+//    public int addHospital(Hospital hospital) {
+//        return hospitalMapper.addHospital(hospital);
+//    }
 }

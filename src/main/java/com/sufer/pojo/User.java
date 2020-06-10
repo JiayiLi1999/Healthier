@@ -13,9 +13,21 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class User {
-    private Integer userid;
-    private String userpwd;
-    private String useremail;
-    private boolean usertype;
+    private Integer userId;
+    private String userName;
+    private String userPwd;
+    private String userEmail;
+    private boolean userType;
 
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId=" + userId +
+                ", userName='" + userName + '\'' +
+                ", userPwd='" + userPwd + '\'' +
+                ", userEmail='" + userEmail + '\'' +
+                ", userType=" + userType +
+                '}';
+    }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="utf-8">
@@ -21,11 +21,11 @@
     <link rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff">
 	
 	<!-- Styles -->
-    <link href="assets/css/lib/font-awesome.min.css" rel="stylesheet">
-    <link href="assets/css/lib/themify-icons.css" rel="stylesheet">
-    <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/lib/simdahs.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link th:href="@{css/lib/font-awesome.min.css}" rel="stylesheet">
+    <link th:href="@{css/lib/themify-icons.css}" rel="stylesheet">
+    <link th:href="@{css/lib/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{css/lib/simdahs.css}" rel="stylesheet">
+    <link th:href="@{css/style.css}" rel="stylesheet">
 </head>
 
 <body class="bg-primary">
@@ -36,22 +36,22 @@
 				<div class="col-lg-6 col-lg-offset-3">
 					<div class="login-content">
 						<div class="login-logo">
-							<a href="index.html"><span>小康</span></a>
+							<a th:href="@{index}"><span>小康</span></a>
 						</div>
 						<div class="login-form">
 							<h4>注册</h4>
-							<form>
+							<form th:action="@{/register}">
 								<div class="form-group">
 									<label>用户名</label>
-									<input type="email" class="form-control" >
+									<input name="use-name" type="text" class="form-control" >
 								</div>
 								<div class="form-group">
 									<label>电子邮箱</label>
-									<input type="email" class="form-control" >
+									<input name="user-email" type="email" class="form-control" >
 								</div>
 								<div class="form-group">
 									<label>密码</label>
-									<input type="password" class="form-control" >
+									<input name="user-pwd" type="password" class="form-control" >
 								</div>
 								<div class="checkbox">
 									<label>
@@ -65,8 +65,10 @@
 										<button type="button" class="btn btn-primary bg-twitter btn-flat btn-addon m-t-10"><i class="ti-twitter"></i>使用twitter注册</button>
 									</div>
 								</div>
+
+
 								<div class="register-link m-t-15 text-center">
-									<p>已有账户？<a href="page-login.html"> 登录</a></p>
+									<p>已有账户？<a th:href="@{page-login}"> 登录</a></p>
 								</div>
 							</form>
 						</div>

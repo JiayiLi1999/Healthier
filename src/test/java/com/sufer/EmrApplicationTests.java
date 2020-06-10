@@ -14,8 +14,10 @@ import java.util.Map;
 @SpringBootTest
 class EmrApplicationTests {
 
+    DataSource dataSource;
     @Test
-    void contextLoads() {
+    void contextLoads() throws SQLException {
+        dataSource.getConnection();
 
     }
 

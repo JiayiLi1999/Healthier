@@ -13,11 +13,11 @@ import java.util.List;
 public interface HospitalService {
 
 
-    //查询所有医院
-    List<Hospital> selectAllHospital();
-
-    //添加医院
-    int addHospital(Hospital hospital);
+//    //查询所有医院
+//    List<Hospital> selectAllHospital();
+//
+//    //添加医院
+//    int addHospital(Hospital hospital);
 
 
 }

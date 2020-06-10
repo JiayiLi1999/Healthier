@@ -18,19 +18,19 @@ import java.util.List;
 @RestController
 public class HospitalController {
 
-    @Autowired
-    private HospitalService hospitalService;
-
-    @GetMapping("/addHospital")
-    public String addHospital(){
-        Hospital hospital = new Hospital(001,"小康诊所",1000);
-        hospitalService.addHospital(hospital);
-        return "ok";
-    }
-
-    @GetMapping("/selectAllHospital")
-    public List<Hospital> selectAllHospital(){
-        List<Hospital> hospitals = hospitalService.selectAllHospital();
-        return hospitals;
-    }
+//    @Autowired
+//    private HospitalService hospitalService;
+//
+//    @GetMapping("/addHospital")
+//    public String addHospital(){
+//        Hospital hospital = new Hospital(001,"小康诊所",1000);
+//        hospitalService.addHospital(hospital);
+//        return "ok";
+//    }
+//
+//    @GetMapping("/selectAllHospital")
+//    public List<Hospital> selectAllHospital(){
+//        List<Hospital> hospitals = hospitalService.selectAllHospital();
+//        return hospitals;
+//    }
 }

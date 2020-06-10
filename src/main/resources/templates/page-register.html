@@ -40,10 +40,13 @@
 						</div>
 						<div class="login-form">
 							<h4>注册</h4>
+
+							<!--/*@thymesVar id="msg" type=""*/-->
+							<p style="color: red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
 							<form th:action="@{/register}">
 								<div class="form-group">
 									<label>用户名</label>
-									<input name="use-name" type="text" class="form-control" >
+									<input name="user-name" type="text" class="form-control" >
 								</div>
 								<div class="form-group">
 									<label>电子邮箱</label>

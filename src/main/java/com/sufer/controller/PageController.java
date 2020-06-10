@@ -8,7 +8,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  * @author danger
@@ -71,10 +74,13 @@ public class PageController {
                                @RequestParam("user-pwd")String password,
                                @RequestParam("user-name")String userName,
                                HttpSession session,
-                               Model model){
-        int s = userService.addUser(userName, userEmail, password);
+                               Model model, HttpServletResponse response) throws IOException {
+        User user = new User(0,userName,password,userEmail,false);
+        System.out.println(user);
+        int s = userService.addUser(user);
         System.out.println("s = " + s);
-        session.setAttribute("msg","注册成功");
+        //session.setAttribute("msg","注册成功!");
+        model.addAttribute("msg","注册成功!");
         return "redirect:/page-register";
     }
 

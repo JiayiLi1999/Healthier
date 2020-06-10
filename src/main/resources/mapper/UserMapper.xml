@@ -30,8 +30,8 @@
         </where>
     </select>
 
-    <insert id="addUser" parameterMap="UserParaMapping">
+    <insert id="addUser" keyProperty="userId" useGeneratedKeys="true" parameterType="User" parameterMap="UserParaMapping">
         insert into user(user_name, user_email, user_pwd)
-        values ( #{userName} , #{userEmail}, #{password})
+        values (#{userName} , #{userEmail}, #{userPwd})
     </insert>
 </mapper>

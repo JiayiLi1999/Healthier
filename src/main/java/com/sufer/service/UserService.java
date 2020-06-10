@@ -11,5 +11,5 @@ import com.sufer.pojo.User;
 public interface UserService {
     User selectPasswordByName(String userName, String password);
     User selectPasswordByEmail(String userEmail, String password);
-    int addUser(String userName, String userEmail, String password);
+    int addUser(User user);
 }

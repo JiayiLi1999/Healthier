@@ -20,6 +20,7 @@ public class User {
     private boolean userType;
 
 
+
     @Override
     public String toString() {
         return "User{" +

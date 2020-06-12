@@ -15,23 +15,21 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class Record {
-
-    private Integer recordId;
-    private Patient patient;
-    private Doctor doctor;
-    private Double bodyTemperature;
-    private Integer breath;
-    private Integer pulse;
-    private Integer bloodPressureHigh;
-    private Integer bloodPressureLow;
-    private Integer bloodGlucose;
-    private Integer bloodFat;
+    private int recordId;
+    private String patientName;
+    private int doctorId;
+    private double bodyTemperature;
+    private int breath;
+    private int pulse;
+    private int bloodPressureHigh;
+    private int bloodPressureLow;
+    private int bloodGlucose;
+    private int bloodFat;
     private String diseasesClassification;
     private String symptom;
-    private Date onset;
-    private boolean isInfectious;
+    private String onset;
+    private String isInfectious;
     private String chiefComplaint;
     private String presentIllness;
     private String pastIllness;
@@ -40,12 +38,19 @@ public class Record {
     private String diagnose;
     private String doctorAdvice;
 
+//    public Record(int i, String patientName, Integer doctorId, Double bodyTemperature, Integer breath, Integer pulse, Integer bloodPressureHigh, Integer bloodPressureLow, Integer bloodGlucose, Integer bloodFat, String diseasesClassification, String symptom, String onset, String isInfectious, String chiefComplaint, String presentIllness, String pastIllness, String personalIllness, String familyIllness, String diagnose, String doctorAdvice) {
+//    }
+
+//    public Record(int i, String patientName, Integer doctorId, Double bodyTemperature, Integer breath, Integer pulse, Integer bloodPressureHigh, Integer bloodPressureLow, Integer bloodGlucose, Integer bloodFat, String diseasesClassification, String symptom, String onset, String isInfectious, String chiefComplaint, String presentIllness, String pastIllness, String personalIllness, String familyIllness, String diagnose, String doctorAdvice) {
+//    }
+
+
     @Override
     public String toString() {
         return "Record{" +
                 "recordId=" + recordId +
-                ", patient=" + patient +
-                ", doctor=" + doctor +
+                ", patientName=" + patientName +
+                ", doctorId=" + doctorId +
                 ", bodyTemperature=" + bodyTemperature +
                 ", breath=" + breath +
                 ", pulse=" + pulse +

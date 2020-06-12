@@ -14,11 +14,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Patient {
-
-    private Integer patientId;
+    private int patientId;
     private String patientName;
-    private boolean gender;
-    private Integer age;
+    private int doctorId;
+    private String gender;
+    private int age;
     private String contact;
     private String IDCardNo;
     private String addressCity;
@@ -26,8 +26,9 @@ public class Patient {
     private String addressStreet;
     private String relatedName;
     private String relatedPhoneNumber;
-    private Double height;
-    private Double weight;
+    private double height;
+    private int weight;
+
 
     @Override
     public String toString() {

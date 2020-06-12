@@ -18,13 +18,14 @@ import java.util.Date;
 public class Prescription {
 
     private Integer prescriptionId;
-    private Patient patient;
-    private Doctor doctor;
-    private Date prescriptionDate;
-    private Medicine medicine;
+    private Integer doctorId;
+    private Integer patientId;
+    private String medicineName;
+    private Integer medicineId;
     private Integer medicineNum;
     private String medicineFrequency;
     private Integer medicineDay;
+    private Double medicineSinglePrice;
     private Double medicineTotalPrice;
     private String comment;
 
@@ -32,13 +33,14 @@ public class Prescription {
     public String toString() {
         return "Prescription{" +
                 "prescriptionId=" + prescriptionId +
-                ", patient=" + patient +
-                ", doctor=" + doctor +
-                ", prescriptionDate=" + prescriptionDate +
-                ", medicine=" + medicine +
+                ", patientId=" + patientId +
+                ", doctorId=" + doctorId +
+                ", medicineName=" + medicineName +
+                ", medicine=" + medicineId +
                 ", medicineNum=" + medicineNum +
                 ", medicineFrequency='" + medicineFrequency + '\'' +
                 ", medicineDay=" + medicineDay +
+                ", medicineSinglePrice=" + medicineSinglePrice +
                 ", medicineTotalPrice=" + medicineTotalPrice +
                 ", comment='" + comment + '\'' +
                 '}';

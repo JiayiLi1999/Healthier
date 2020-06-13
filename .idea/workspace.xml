@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8aa32a7b-debd-42b6-aaf2-eee2ca2229cf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sufer/controller/PrescriptionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sufer/mapper/PrescriptionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sufer/service/PrescriptionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sufer/service/impl/PrescriptionServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/PrescriptionMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sufer/pojo/Prescription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sufer/pojo/Prescription.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/new_prescription.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/new_prescription.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sufer/pojo/Prescription.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sufer/pojo/Prescription.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/new_prescription.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/new_prescription.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sufer/controller/DoctorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sufer/controller/DoctorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sufer/controller/PageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sufer/controller/PageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sufer/mapper/DoctorMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sufer/mapper/DoctorMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sufer/pojo/Doctor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sufer/pojo/Doctor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sufer/pojo/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sufer/pojo/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sufer/service/DoctorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sufer/service/DoctorService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sufer/service/impl/DoctorServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sufer/service/impl/DoctorServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/DoctorMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/DoctorMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/new_record.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/new_record.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +43,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mapper" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -55,6 +55,7 @@
       <recent name="com.sufer.service.impl" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\上财\大三\综合设计实验\emr\src\main\resources\templates" />
       <recent name="E:\上财\大三\综合设计实验\emr\src\main\resources\mapper" />
     </key>
   </component>
@@ -104,42 +105,42 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1591801176806" />
-    <state width="1323" height="67" key="GridCell.Tab.0.bottom" timestamp="1591960130057">
+    <state width="1323" height="27" key="GridCell.Tab.0.bottom" timestamp="1592056895269">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="67" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591960130057" />
-    <state width="1323" height="67" key="GridCell.Tab.0.center" timestamp="1591960130057">
+    <state width="1323" height="27" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592056895269" />
+    <state width="1323" height="27" key="GridCell.Tab.0.center" timestamp="1592056895269">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="67" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1591960130057" />
-    <state width="1323" height="67" key="GridCell.Tab.0.left" timestamp="1591960130056">
+    <state width="1323" height="27" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592056895269" />
+    <state width="1323" height="27" key="GridCell.Tab.0.left" timestamp="1592056895269">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="67" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1591960130056" />
-    <state width="1323" height="67" key="GridCell.Tab.0.right" timestamp="1591960130057">
+    <state width="1323" height="27" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592056895269" />
+    <state width="1323" height="27" key="GridCell.Tab.0.right" timestamp="1592056895269">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="67" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1591960130057" />
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1591941775023">
+    <state width="1323" height="27" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592056895269" />
+    <state width="1323" height="230" key="GridCell.Tab.1.bottom" timestamp="1592056490938">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591941775023" />
-    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1591941775023">
+    <state width="1323" height="230" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592056490938" />
+    <state width="1323" height="230" key="GridCell.Tab.1.center" timestamp="1592056490938">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1591941775023" />
-    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1591941775023">
+    <state width="1323" height="230" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1592056490938" />
+    <state width="1323" height="230" key="GridCell.Tab.1.left" timestamp="1592056490938">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1591941775023" />
-    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1591941775023">
+    <state width="1323" height="230" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1592056490938" />
+    <state width="1323" height="230" key="GridCell.Tab.1.right" timestamp="1592056490938">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1591941775023" />
-    <state x="163" y="0" key="SettingsEditor" timestamp="1591863755446">
+    <state width="1323" height="230" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1592056490938" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1592049727447">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1591863755446" />
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1592049727447" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1591892898650">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

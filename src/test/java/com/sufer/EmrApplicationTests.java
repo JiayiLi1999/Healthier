@@ -18,7 +18,6 @@ class EmrApplicationTests {
     @Test
     void contextLoads() throws SQLException {
         dataSource.getConnection();
-
     }
 
 }

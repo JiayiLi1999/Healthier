@@ -4,6 +4,8 @@ import com.sufer.pojo.Patient;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * PatientMapper
  * @author danger
@@ -14,4 +16,7 @@ import org.springframework.stereotype.Repository;
 
 public interface PatientMapper {
     int addPatient(Patient patient);
+    Patient selectPatientById(int id);
+
+    List<Patient> selectPatientByDoctorId(int doctorId);
 }

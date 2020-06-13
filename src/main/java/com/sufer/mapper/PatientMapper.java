@@ -1,5 +1,6 @@
 package com.sufer.mapper;
 
+import com.sufer.pojo.Patient;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
@@ -12,6 +13,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 
 public interface PatientMapper {
-
-
+    int addPatient(Patient patient);
 }

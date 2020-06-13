@@ -79,9 +79,8 @@ public class PageController {
         System.out.println(user);
         int s = userService.addUser(user);
         System.out.println("s = " + s);
-        //session.setAttribute("msg","注册成功!");
         model.addAttribute("msg","注册成功!");
-        return "redirect:/page-register";
+        return "page-register";
     }
 
     @RequestMapping("/page-register")
@@ -96,7 +95,7 @@ public class PageController {
     }
 
     @RequestMapping("/search_personalInfo")
-    public String searchPersonalInfo(){
+    public String searchPersonalInfo(Model model){
         return "search_personalInfo";
     }
 

@@ -253,29 +253,29 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="card alert">
-                                <form>
+                                <form th:action="@{/selectPatient}">
                                     <div class="form_block">
                                         <h3>基本信息</h3>
                                         <div class="col-lg-3">
                                             <div class="form-group">
-                                                <label for="fname"> 医生ID </label>
+                                                <label> 医生ID </label>
+                                                <input name="doctor-id" type="text" size="8" class="form_input">
+                                            </div>
+                                            <div class="form-group">
+                                                <label> 病人ID </label>
+                                                <input name="id" type="text" size="8" class="form_input">
+                                            </div>
+                                            <div class="form-group">
+                                                <label> 姓名 </label>
                                                 <input type="text" size="8" class="form_input">
                                             </div>
                                             <div class="form-group">
-                                                <label for="fname"> 病人ID </label>
-                                                <input type="text" size="8" class="form_input">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="fname"> 姓名 </label>
-                                                <input type="text" size="8" class="form_input">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="fname"> 性别 </label>
+                                                <label> 性别 </label>
                                                     <input type="radio" name="sex" checked="checked">男
                                                     <input type="radio" name="sex">女
                                             </div>
                                             <div class="form-group">
-                                                <label for="fname"> 年龄 </label>
+                                                <label> 年龄 </label>
                                                 <input type="text" size="3" class="form_input">
                                             </div>
                                             <div class="form-group">
@@ -334,7 +334,6 @@
                                     <h3>查询结果</h3>
                                     <thead>
                                         <tr>
-                                            <th>#</th>
                                             <th>ID</th>
                                             <th>姓名</th>
                                             <th>年龄</th>
@@ -348,44 +347,17 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>20123984</td>
-                                            <td>王曦</td>
-                                            <td>22</td>
-                                            <td>女</td>
-                                            <td>1898988762</td>
-                                            <td>王梓</td>
-                                            <td>17797972323</td>
-                                            <td>53290931389021412</td>
-                                            <td>云南玉溪</td>
-                                            <td>丰谷</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>90234984</td>
-                                            <td>谢婷</td>
-                                            <td>44</td>
-                                            <td>女</td>
-                                            <td>1228138762</td>
-                                            <td>王梓</td>
-                                            <td>178787972323</td>
-                                            <td>12931382131021412</td>
-                                            <td>上海</td>
-                                            <td>松江</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>83557102</td>
-                                            <td>赵科</td>
-                                            <td>29</td>
-                                            <td>女</td>
-                                            <td>1898988762</td>
-                                            <td>李玲</td>
-                                            <td>13489972323</td>
-                                            <td>8213790349021412</td>
-                                            <td>上海</td>
-                                            <td>黄浦</td>
+                                        <tr th:each="patient:*{patients}">
+                                            <td th:text="${patient.getPatientId()}"></td>
+                                            <td th:text="${patient.getPatientName()}"></td>
+                                            <td th:text="${patient.getAge()}"></td>
+                                            <td th:text="${patient.getGender().equals('0')?'男':'女'}"></td>
+                                            <td th:text="${patient.getContact()}"></td>
+                                            <td th:text="${patient.getRelatedName()}"></td>
+                                            <td th:text="${patient.getRelatedPhoneNumber()}"></td>
+                                            <td th:text="${patient.getIDCardNo()}"></td>
+                                            <td th:text="${patient.getAddressCity()}"></td>
+                                            <td th:text="${patient.getAddressDistrict()}"></td>
                                         </tr>
                                     </tbody>
                                 </table>

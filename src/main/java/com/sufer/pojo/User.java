@@ -19,10 +19,6 @@ public class User {
     private String userEmail;
     private boolean userType;
 
-    public User(int i, String userName, String password, String userEmail, boolean b) {
-    }
-
-
     @Override
     public String toString() {
         return "User{" +

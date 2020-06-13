@@ -3,6 +3,7 @@ package com.sufer.pojo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Date;
 
@@ -16,21 +17,20 @@ import java.util.Date;
 @NoArgsConstructor
 
 public class Doctor {
-
-    private Integer doctorId;
+    private int doctorId;
     private String doctorName;
-    private String address;
-    private Hospital hospital;
-    private String position;
-    private String introduction;
-    private Double mark;
-    private Date birthday;
-    private boolean gender;
+    private String gender;
+    private String birthday;
     private String education;
+    private double mark;
+    private String address;
+    private String hospitalName;
     private String phoneNumber;
-    private String office;
     private String email;
-    private String webpage;
+    private String position;
+    private String office;
+    private String webPage;
+    private String introduction;
 
     @Override
     public String toString() {
@@ -38,7 +38,7 @@ public class Doctor {
                 "doctorId=" + doctorId +
                 ", doctorName='" + doctorName + '\'' +
                 ", address='" + address + '\'' +
-                ", hospital=" + hospital +
+                ", hospitalName=" + hospitalName +
                 ", position='" + position + '\'' +
                 ", introduction='" + introduction + '\'' +
                 ", mark=" + mark +
@@ -48,7 +48,7 @@ public class Doctor {
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", office='" + office + '\'' +
                 ", email='" + email + '\'' +
-                ", webpage='" + webpage + '\'' +
+                ", webPage='" + webPage + '\'' +
                 '}';
     }
 }

@@ -81,14 +81,18 @@ public class PageController {
         System.out.println("s = " + s);
         //session.setAttribute("msg","注册成功!");
         model.addAttribute("msg","注册成功!");
-        return "redirect:/page-register";
+        return "page-info";
     }
+//
+//    @RequestMapping("/page-info")
+//    public String pageInfo(){
+//        return "page-info";
+//    }
 
     @RequestMapping("/page-register")
     public String pageRegister(){
         return "page-register";
     }
-
 
     @RequestMapping("/page-reset-password")
     public String pageResetPassword(){

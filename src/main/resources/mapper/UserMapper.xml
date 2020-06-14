@@ -22,6 +22,9 @@
         select * from user where user_name = #{userName} and user_pwd = #{password}
     </select>
 
+    <select id="selectUserById" resultType="User" resultMap="UserMapping">
+        select * from user where user_id = #{userId}
+    </select>
     <select id="selectPasswordByEmail" resultType="User" resultMap="UserMapping">
         select *
         from user
@@ -29,6 +32,12 @@
             user_email = #{userEmail} and user_pwd = #{password}
         </where>
     </select>
+
+    <update id="updatePassword">
+        update user
+        set user_pwd = #{newPassword}
+        where user_email = #{userEmail}
+    </update>
 
     <insert id="addUser" keyProperty="userId" useGeneratedKeys="true" parameterType="User" parameterMap="UserParaMapping">
         insert into user(user_name, user_email, user_pwd)

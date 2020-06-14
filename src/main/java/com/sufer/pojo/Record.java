@@ -38,13 +38,6 @@ public class Record {
     private String diagnose;
     private String doctorAdvice;
 
-//    public Record(int i, String patientName, Integer doctorId, Double bodyTemperature, Integer breath, Integer pulse, Integer bloodPressureHigh, Integer bloodPressureLow, Integer bloodGlucose, Integer bloodFat, String diseasesClassification, String symptom, String onset, String isInfectious, String chiefComplaint, String presentIllness, String pastIllness, String personalIllness, String familyIllness, String diagnose, String doctorAdvice) {
-//    }
-
-//    public Record(int i, String patientName, Integer doctorId, Double bodyTemperature, Integer breath, Integer pulse, Integer bloodPressureHigh, Integer bloodPressureLow, Integer bloodGlucose, Integer bloodFat, String diseasesClassification, String symptom, String onset, String isInfectious, String chiefComplaint, String presentIllness, String pastIllness, String personalIllness, String familyIllness, String diagnose, String doctorAdvice) {
-//    }
-
-
     @Override
     public String toString() {
         return "Record{" +

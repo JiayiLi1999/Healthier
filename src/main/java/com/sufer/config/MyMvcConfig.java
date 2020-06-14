@@ -15,6 +15,7 @@ public class MyMvcConfig implements WebMvcConfigurer {
         registry.addInterceptor(new MyHandlerInterceptor())
                 .addPathPatterns("/**")
                 .excludePathPatterns("/login","/page-login","/register","/page-register","/page-reset-password",
+                        "/resetpwd","/page-info","/newInfo",
                         "/css/**","/fonts/**","/images/**","/js/**");
     }
 }

@@ -19,4 +19,9 @@ public class DoctorServiceImpl implements DoctorService {
     public int addDoctor(Doctor doctor) {
         return doctorMapper.addDoctor(doctor);
     }
+
+    @Override
+    public Doctor selectDoctorByUserId(Integer userId) {
+        return doctorMapper.selectDoctorByUserId(userId);
+    }
 }

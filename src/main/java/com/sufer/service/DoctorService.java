@@ -9,4 +9,6 @@ import com.sufer.pojo.Doctor;
  */
 public interface DoctorService {
     int addDoctor(Doctor doctor);
+    Doctor selectDoctorByUserId(Integer userId);
+
 }

@@ -31,24 +31,6 @@ public class Doctor {
     private String office;
     private String webPage;
     private String introduction;
+    private User user;
 
-    @Override
-    public String toString() {
-        return "Doctor{" +
-                "doctorId=" + doctorId +
-                ", doctorName='" + doctorName + '\'' +
-                ", address='" + address + '\'' +
-                ", hospitalName=" + hospitalName +
-                ", position='" + position + '\'' +
-                ", introduction='" + introduction + '\'' +
-                ", mark=" + mark +
-                ", birthday=" + birthday +
-                ", gender=" + gender +
-                ", education='" + education + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", office='" + office + '\'' +
-                ", email='" + email + '\'' +
-                ", webPage='" + webPage + '\'' +
-                '}';
-    }
 }

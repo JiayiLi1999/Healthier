@@ -42,8 +42,8 @@
 					<li class="label">工作</li>
 					<li class="active open"><a class="sidebar-sub-toggle"><i class="ti-heart"></i> 医疗服务 <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
-                            <li><a th:href="@{new_patient}">新建病人</a></li>
-                            <li class="active"><a th:href="@{new_record}">新开病例</a></li>
+                            <li class="active"><a th:href="@{new_patient}">新建病人</a></li>
+                            <li><a th:href="@{new_record}">新开病例</a></li>
                             <li><a th:href="@{new_prescription}">新开处方</a></li>
                         </ul>
                     </li>
@@ -236,7 +236,7 @@
                     <div class="col-lg-8 p-0">
                         <div class="page-header">
                             <div class="page-title">
-                                <h1>新开病例</h1>
+                                <h1>新建病人</h1>
                             </div>
                         </div>
                     </div><!-- /# column -->
@@ -245,7 +245,7 @@
                             <div class="page-title">
                                 <ol class="breadcrumb text-right">
                                     <li><a href="#">医疗服务</a></li>
-                                    <li><a href="#">新开病例</a></li>
+                                    <li><a href="#">新建病人</a></li>
                                 </ol>
                             </div>
                         </div>
@@ -255,7 +255,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="card alert">
-                                <form th:action="@{/newRecord}">
+                                <form th:action="@{/newPatient}">
                                     <div class="form_block">
                                         <h3>基本信息</h3>
                                         <div class="col-lg-3">
@@ -264,91 +264,50 @@
                                                 <input name="doctor_id" type="text" size="8">
                                             </div>
                                             <div class="form-group">
-                                                <label> 病人ID </label>
-                                                <input name="patient_id" type="text" size="8">
+                                                <label> 病人姓名 </label>
+                                                <input name="patient_name" type="text" size="8">
+                                            </div>
+                                            <div class="form-group">
+                                                <label> 性别 </label>
+                                                <input name="gender" type="text" size="8">
+                                            </div>
+                                            <div class="form-group">
+                                                <label> 年龄 </label>
+                                                <input name="age" type="text" size="3">
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="form_block">
-                                        <h3>身体信息 </h3>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label>联系方式</label>
+                                                <input name="contact" type="text" size='18'>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>身份证号</label>
+                                                <input name="IDcard_No" type="text" size='18'>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>家庭住址</label>
+                                                <input name="city" type="text" size='6'>市
+												<input name="district" type="text" size='6'>区
+												<input name="street" type="text" size='28'>
+                                            </div>
+                                        </div>
                                         <div class="col-lg-5">
                                             <div class="form-group">
-                                                <label>体温</label>
-                                                <input name="body_temperature" type="text" size="6">℃
+                                                <label>关系人姓名</label>
+                                                <input name="related_name" type="text" size="6">
                                             </div>
                                             <div class="form-group">
-                                                <label>呼吸</label>
-                                                <input name="breath" type="text" size="6">次/分
+                                                <label>关系人联系方式</label>
+                                                <input name="related_phonenumber" type="text" size="18"><br/>
                                             </div>
                                             <div class="form-group">
-                                                <label>脉搏</label>
-                                                <input name="pulse" type="text" size="6">次/分
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-5">
-                                            <div class="form-group">
-                                                <label>血压</label>
-                                                <input name="blood_pressure_high" type="text" size="6">/<input name="blood_pressure_low" type="text" size="6">mmHg
+                                                <label>身高</label>
+                                                <input name="height" type="text" size="6">cm
                                             </div>
                                             <div class="form-group">
-                                                <label>血糖</label>
-                                                <input name="blood_glucose" type="text" size="6">mmol/L
-                                            </div>
-                                            <div class="form-group">
-                                                <label>血脂</label>
-                                                <input name="blood_fat" type="text" size="6">mmol/L
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="form_block">
-                                        <h3>病例信息 </h3>
-                                        <div class="col-lg-12">
-                                            <div class="form-group">
-                                                <label>疾病分类</label>
-                                                <input name="diseases_classification" type="text" size="6">
-                                            </div>
-                                            <div class="form-group">
-                                                <label>症状</label>
-                                                <input name="symptom" type="text" size="45">
-                                            </div>
-                                            <div class="form-group">
-                                                <label>发病日期</label>
-                                                <input name="onset" type="text" size="12">
-                                            </div>
-                                            <div class="form-group">
-                                                <label>是否传染病</label>
-                                                <input name="is_infectious" type="text" size="5">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <div class="form_group">
-                                                <label>主诉</label>
-                                                <textarea name="chief_complaint" rows="3" cols="130"></textarea>
-                                            </div>
-                                            <div class="form_group">
-                                                <label>现病史</label>
-                                                <textarea name="present_illness" rows="3" cols="130"></textarea>
-                                            </div>
-                                            <div class="form_group">
-                                                <label>既往史</label>
-                                                <textarea name="past_illness" rows="3" cols="130"></textarea>
-                                            </div>
-                                            <div class="form_group">
-                                                <label>个人史</label>
-                                                <textarea name="personal_illness" rows="3" cols="130"></textarea>
-                                            </div>
-                                            <div class="form_group">
-                                                <label>家庭史</label>
-                                                <textarea name="family_illness" rows="3" cols="130"></textarea>
-                                            </div>
-                                            <div class="form_group">
-                                                <label>诊断信息</label>
-                                                <textarea name="diagnose" rows="3" cols="130"></textarea>
-                                            </div>
-                                            <div class="form_group">
-                                                <label>医嘱</label>
-                                                <textarea name="doctor_advice" rows="3" cols="130"></textarea>
+                                                <label>体重</label>
+                                                <input name="weight" type="text" size="6">kg
                                             </div>
                                         </div>
                                     </div>

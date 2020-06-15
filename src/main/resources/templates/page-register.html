@@ -26,6 +26,10 @@
     <link th:href="@{css/lib/bootstrap.min.css}" rel="stylesheet">
     <link th:href="@{css/lib/simdahs.css}" rel="stylesheet">
     <link th:href="@{css/style.css}" rel="stylesheet">
+
+	<!-- js -->
+	<script type="text/javascript" th:src="@{js/example.js}"></script>
+
 </head>
 
 <body class="bg-primary">
@@ -36,7 +40,7 @@
 				<div class="col-lg-6 col-lg-offset-3">
 					<div class="login-content">
 						<div class="login-logo">
-							<a th:href="@{index}"><span>小康</span></a>
+							<a th:href="@{index}"><span>小康——电子病历管理系统</span></a>
 						</div>
 						<div class="login-form">
 							<h4>注册</h4>
@@ -58,7 +62,7 @@
 								</div>
 								<div class="checkbox">
 									<label>
-										<input type="checkbox"> 同意条款
+										<input type="checkbox" id="agree_policy"> 同意条款
 									</label>									
 								</div>
 								<button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">注册</button>

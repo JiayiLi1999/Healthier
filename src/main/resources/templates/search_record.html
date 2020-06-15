@@ -42,6 +42,7 @@
 					<li class="label">工作</li>
 					<li><a class="sidebar-sub-toggle"><i class="ti-heart"></i> 医疗服务 <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
+                            <li><a th:href="@{new_patient}">新建病人</a></li>
                             <li><a th:href="@{new_record}">新开病例</a></li>
                             <li><a th:href="@{new_prescription}">新开处方</a></li>
                         </ul>
@@ -256,41 +257,33 @@
                                 <form>
                                     <div class="form_block">
                                         <h3>搜索项</h3>
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-4">
                                             <div class="form-group">
-                                                <label for="fname"> 医生ID </label>
-                                                <input type="text" size="8" class="form_input">
+                                                <label> 医生ID </label>
+                                                <input type="text" size="8" class="form-control">
                                             </div>
                                             <div class="form-group">
-                                                <label for="fname"> 病人ID </label>
-                                                <input type="text" size="8" class="form_input">
+                                                <label> 病人ID </label>
+                                                <input type="text" size="8" class="form-control">
                                             </div>
                                             <div class="form-group">
-                                                <label for="fname"> 病人姓名 </label>
-                                                <input type="text" size="8" class="form_input">
+                                                <label> 病人姓名 </label>
+                                                <input type="text" size="8" class="form-control">
                                             </div>
                                             <div class="form-group">
-                                                <label for="fname"> 性别 </label>
-                                                    <input type="radio" name="sex" checked="checked">男
-                                                    <input type="radio" name="sex">女
-                                            </div>
-                                            <div class="form-group">
-                                                <label>身份证号</label>
-                                                <input type="text" size='18' class="form_input">
+                                                <label> 性别 </label>
+                                                <input type="radio" name="sex" checked="checked">男
+                                                <input type="radio" name="sex">女
                                             </div>
                                         </div>
-                                        <div class="col-lg-5">
+                                        <div class="col-lg-4">
                                             <div class="form-group">
                                                 <label>疾病分类</label>
-                                                <input type="text" size="6" class="form_input">
-                                            </div>
-                                            <div class="form-group">
-                                                <label>症状</label>
-                                                <input type="text" size="40" class="form_input">
+                                                <input type="text" size="6" class="form-control">
                                             </div>
                                             <div class="form-group">
                                                 <label>发病日期</label>
-                                                <input type="text" size="12" class="form_input">
+                                                <input type="text" size="12" class="form-control">
                                             </div>
                                             <div class="form-group">
                                                 <label>是否传染病</label>

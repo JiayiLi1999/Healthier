@@ -5,7 +5,7 @@
 <mapper namespace="com.sufer.mapper.RecordMapper">
     <resultMap id="RecordMapping" type="Record">
         <id column="record_id" property="recordId"></id>
-        <result column="patient_name" property="patientName"></result>
+        <result column="patient_id" property="patientId"></result>
         <result column="doctor_id" property="doctorId"></result>
         <result column="body_temperature" property="bodyTemperature"></result>
         <result column="breath" property="breath"></result>
@@ -28,7 +28,7 @@
     </resultMap>
 
     <parameterMap id="RecordParaMapping" type="Record">
-        <parameter resultMap="patient_name" property="patientName"></parameter>
+        <parameter resultMap="patient_id" property="patientId"></parameter>
         <parameter resultMap="doctor_id" property="doctorId"></parameter>
         <parameter resultMap="body_temperature" property="bodyTemperature"></parameter>
         <parameter resultMap="breath" property="breath"></parameter>
@@ -51,7 +51,7 @@
     </parameterMap>
 
     <insert id="addRecord" keyProperty="recordId" useGeneratedKeys="true" parameterType="Record" parameterMap="RecordParaMapping">
-        insert into record(patient_name, doctor_id, body_temperature, breath, pulse, blood_pressure_high, blood_pressure_low, blood_glucose,blood_fat, diseases_classification , symptom, onset, is_infectious, chief_complaint, present_illness, past_illness, personal_illness, family_illness, diagnose, doctor_advice)
-        values (#{patientName} , #{doctorId}, #{bodyTemperature}, #{breath}, #{pulse}, #{bloodPressureHigh}, #{bloodPressureLow}, #{bloodGlucose},#{bloodFat}, #{diseasesClassification}, #{symptom}, #{onset}, #{isInfectious}, #{chiefComplaint}, #{presentIllness}, #{pastIllness}, #{personalIllness}, #{familyIllness}, #{diagnose}, #{doctorAdvice})
+        insert into record(patient_id, doctor_id, body_temperature, breath, pulse, blood_pressure_high, blood_pressure_low, blood_glucose,blood_fat, diseases_classification , symptom, onset, is_infectious, chief_complaint, present_illness, past_illness, personal_illness, family_illness, diagnose, doctor_advice)
+        values (#{patientId} , #{doctorId}, #{bodyTemperature}, #{breath}, #{pulse}, #{bloodPressureHigh}, #{bloodPressureLow}, #{bloodGlucose},#{bloodFat}, #{diseasesClassification}, #{symptom}, #{onset}, #{isInfectious}, #{chiefComplaint}, #{presentIllness}, #{pastIllness}, #{personalIllness}, #{familyIllness}, #{diagnose}, #{doctorAdvice})
     </insert>
 </mapper>

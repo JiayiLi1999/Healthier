@@ -256,64 +256,37 @@
                                 <form th:action="@{/selectPatient}">
                                     <div class="form_block">
                                         <h3>基本信息</h3>
-                                        <div class="col-lg-3">
+                                        <div class="col-lg-4">
                                             <div class="form-group">
                                                 <label> 医生ID </label>
-                                                <input name="doctor-id" type="text" size="8" class="form_input">
+                                                <input name="doctor-id" type="text" size="8" class="form-control">
                                             </div>
                                             <div class="form-group">
                                                 <label> 病人ID </label>
-                                                <input name="id" type="text" size="8" class="form_input">
+                                                <input name="id" type="text" size="8" class="form-control">
                                             </div>
                                             <div class="form-group">
-                                                <label> 姓名 </label>
-                                                <input type="text" size="8" class="form_input">
+                                                <label> 病人姓名 </label>
+                                                <input type="text" size="8" class="form-control">
                                             </div>
                                             <div class="form-group">
-                                                <label> 性别 </label>
+                                                <label> 病人性别 </label>
                                                     <input type="radio" name="sex" checked="checked">男
                                                     <input type="radio" name="sex">女
-                                            </div>
-                                            <div class="form-group">
-                                                <label> 年龄 </label>
-                                                <input type="text" size="3" class="form_input">
-                                            </div>
-                                            <div class="form-group">
-                                                <label>关系人姓名</label>
-                                                <input type="text" size="6" class="form_input">
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-group">
-                                                <label>联系方式</label>
-                                                <input type="text" size='18' class="form_input">
-                                            </div>
-                                            <div class="form-group">
-                                                <label>关系人联系方式</label>
-                                                <input type="text" size='18' class="form_input">
-                                            </div>
-                                            <div class="form-group">
-                                                <label>身份证号</label>
-                                                <input type="text" size='18' class="form_input">
-                                            </div>
-                                            <div class="form-group">
-                                                <label>家庭住址</label>
-                                                <input type="text" size='6' class="form_input">市
-												<input type="text" size='6' class="form_input">区
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-5">
-                                            <div class="form-group">
                                                 <label>疾病分类</label>
-                                                <input type="text" size="6" class="form_input">
+                                                <input type="text" size="6" class="form-control">
                                             </div>
                                             <div class="form-group">
                                                 <label>症状</label>
-                                                <input type="text" size="40" class="form_input">
+                                                <input type="text" size="40" class="form-control">
                                             </div>
                                             <div class="form-group">
                                                 <label>发病日期</label>
-                                                <input type="text" size="12" class="form_input">
+                                                <input type="text" size="12" class="form-control">
                                             </div>
                                             <div class="form-group">
                                                 <label>是否传染病</label>

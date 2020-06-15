@@ -17,7 +17,7 @@ import java.util.Date;
 @NoArgsConstructor
 public class Record {
     private int recordId;
-    private String patientName;
+    private int patientId;
     private int doctorId;
     private double bodyTemperature;
     private int breath;
@@ -38,18 +38,12 @@ public class Record {
     private String diagnose;
     private String doctorAdvice;
 
-//    public Record(int i, String patientName, Integer doctorId, Double bodyTemperature, Integer breath, Integer pulse, Integer bloodPressureHigh, Integer bloodPressureLow, Integer bloodGlucose, Integer bloodFat, String diseasesClassification, String symptom, String onset, String isInfectious, String chiefComplaint, String presentIllness, String pastIllness, String personalIllness, String familyIllness, String diagnose, String doctorAdvice) {
-//    }
-
-//    public Record(int i, String patientName, Integer doctorId, Double bodyTemperature, Integer breath, Integer pulse, Integer bloodPressureHigh, Integer bloodPressureLow, Integer bloodGlucose, Integer bloodFat, String diseasesClassification, String symptom, String onset, String isInfectious, String chiefComplaint, String presentIllness, String pastIllness, String personalIllness, String familyIllness, String diagnose, String doctorAdvice) {
-//    }
-
 
     @Override
     public String toString() {
         return "Record{" +
                 "recordId=" + recordId +
-                ", patientName=" + patientName +
+                ", patientId=" + patientId +
                 ", doctorId=" + doctorId +
                 ", bodyTemperature=" + bodyTemperature +
                 ", breath=" + breath +

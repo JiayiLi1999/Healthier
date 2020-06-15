@@ -1,7 +1,6 @@
 package com.sufer.controller;
 
 import com.sufer.pojo.Patient;
-import com.sufer.pojo.User;
 import com.sufer.service.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -37,6 +36,31 @@ public class PatientController {
         model.addAttribute("patients",patients);
 
         return "search_personalInfo";
+    }
+
+    @RequestMapping("/newPatient")
+    public String newPatient(@RequestParam(name="patient_name")String patientName,
+                             @RequestParam(name="doctor_id")Integer doctorId,
+                             @RequestParam(name="gender")String gender,
+                             @RequestParam(name="age")Integer age,
+                             @RequestParam(name="contact")String contact,
+                             @RequestParam(name="IDcard_No")String IDCardNo,
+                             @RequestParam(name="city")String addressCity,
+                             @RequestParam(name="district")String addressDistrict,
+                             @RequestParam(name="street")String addressStreet,
+                             @RequestParam(name="related_name")String relatedName,
+                             @RequestParam(name="related_phonenumber")String relatedPhoneNumber,
+                             @RequestParam(name="height")Double height,
+                             @RequestParam(name="weight")Integer weight,
+                             HttpSession session,
+                             Model model, HttpServletResponse response) throws IOException {
+        System.out.println("running new_record");
+        Patient patient = new Patient(0,patientName,doctorId,gender,age,contact,IDCardNo,addressCity,addressDistrict,addressStreet,relatedName,relatedPhoneNumber,height,weight);
+        System.out.println(patient);
+        int p = patientService.addPatient(patient);
+        System.out.println("p = " + p);
+        model.addAttribute("msg","新建病例成功!");
+        return "redirect:/new_patient";
     }
 
 

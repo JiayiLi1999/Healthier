@@ -42,6 +42,7 @@
 					<li class="label">工作</li>
 					<li><a class="sidebar-sub-toggle"><i class="ti-heart"></i> 医疗服务 <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
+                            <li><a th:href="@{new_patient}">新建病人</a></li>
                             <li><a th:href="@{new_record}">新开病例</a></li>
                             <li><a th:href="@{new_prescription}">新开处方</a></li>
                         </ul>
@@ -259,23 +260,23 @@
                                             <h3>搜索条件</h3>
                                             <div class="form-group">
                                                 <label for="fname"> 药品名称 </label>
-                                                <input type="text" size="16" class="form_input">
+                                                <input type="text" size="16" class="form-control">
                                             </div>
                                             <div class="form-group">
                                                 <label for="fname"> 药品ID </label>
-                                                <input type="text" size="8" class="form_input">
+                                                <input type="text" size="8" class="form-control">
                                             </div>
                                             <div class="form-group">
                                                 <label for="fname"> 药品类型 </label>
-                                                <input type="text" size="8" class="form_input">
+                                                <input type="text" size="8" class="form-control">
                                             </div>
                                             <div class="form-group">
                                                 <label for="fname"> 药品形态 </label>
-                                                <input type="text" size="8" class="form_input">
+                                                <input type="text" size="8" class="form-control">
                                             </div>
                                             <div class="form-group">
                                                 <label for="fname"> 使用方法 </label>
-                                                <input type="text" size="8" class="form_input">
+                                                <input type="text" size="8" class="form-control">
                                             </div>
                                         </div>
                                     </div>

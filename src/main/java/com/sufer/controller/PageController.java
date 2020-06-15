@@ -48,6 +48,11 @@ public class PageController {
         return "new_record";
     }
 
+    @RequestMapping("/new_patient")
+    public String newPatient(){
+        return "new_patient";
+    }
+
     @RequestMapping("/login")
     public String pageLogin(@RequestParam("user-email")String userEmail,
                             @RequestParam("password")String password,

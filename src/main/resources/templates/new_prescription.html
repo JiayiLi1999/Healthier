@@ -42,6 +42,7 @@
 					<li class="label">工作</li>
 					<li class="active open"><a class="sidebar-sub-toggle"><i class="ti-heart"></i> 医疗服务 <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
+                            <li><a th:href="@{new_patient}">新建病人</a></li>
                             <li><a th:href="@{new_record}">新开病例</a></li>
                             <li class="active"><a th:href="@{new_prescription}">新开处方</a></li>
                         </ul>
@@ -264,62 +265,6 @@
                                             <div class="form-group">
                                                 <label> 患者id </label>
                                                 <input name="patient_id" type="text" size="8">
-                                            </div>
-                                            <div class="form-group">
-                                                <label> 姓名 </label>
-                                                <input type="text" size="8" disabled value="">
-                                            </div>
-                                            <div class="form-group">
-                                                <label> 性别 </label>
-                                                    <input type="radio" name="sex" disabled checked="checked">男
-                                                    <input type="radio" name="sex" disabled> 女
-                                            </div>
-                                            <div class="form-group">
-                                                <label> 年龄 </label>
-                                                <input type="text" size="3" disabled value="">
-                                            </div>
-                                            <div class="form-group">
-                                                <label>联系方式</label>
-                                                <input type="text" size='18' disabled value="">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="form-group">
-                                                <label>身份证号</label>
-                                                <input type="text" size='18' disabled value="">
-                                            </div>
-                                            <div class="form-group">
-                                                <label>家庭住址</label>
-                                                <input type="text" size='6' disabled value="">市
-												<input type="text" size='6' disabled value="">区
-												<input type="text" size='28' disabled value="">
-                                            </div>
-                                            <div class="form-group">
-                                                <label>关系人姓名</label>
-                                                <input type="text" size="6" disabled value="">
-                                            </div>
-                                            <div class="form-group">
-                                                <label>关系人联系方式</label>
-                                                <input type="text" size="18" disabled value=""><br/>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-5">
-                                            <div class="form-group">
-                                                <label>疾病分类</label>
-                                                <input type="text" size="6" disabled value="">
-                                            </div>
-                                            <div class="form-group">
-                                                <label>症状</label>
-                                                <input type="text" size="45" disabled value="">
-                                            </div>
-                                            <div class="form-group">
-                                                <label>发病日期</label>
-                                                <input type="text" size="12" disabled value="">
-                                            </div>
-                                            <div class="form-group">
-                                                <label>是否传染病</label>
-                                                    <input type="radio" name="sex" disabled>是
-                                                    <input type="radio" name="sex" disabled checked="checked">否
                                             </div>
                                         </div>
                                     </div>

@@ -2,16 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8aa32a7b-debd-42b6-aaf2-eee2ca2229cf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sufer/controller/DoctorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sufer/controller/DoctorController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/example.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/new_patient.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sufer/controller/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sufer/controller/PageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sufer/controller/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sufer/controller/PatientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sufer/controller/RecordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sufer/controller/RecordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sufer/pojo/Record.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sufer/pojo/Record.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/RecordMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/RecordMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/app-profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/app-profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/new_prescription.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/new_prescription.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/new_record.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/new_record.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/page-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/page-info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/page-login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/page-login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/page-register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/page-register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/page-reset-password.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/page-reset-password.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/search_medicine.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/search_medicine.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/search_personalInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/search_personalInfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/search_prescription.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/search_prescription.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/search_record.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/search_record.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/sufer/controller/PageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sufer/controller/PageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sufer/mapper/DoctorMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sufer/mapper/DoctorMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sufer/pojo/Doctor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sufer/pojo/Doctor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/sufer/pojo/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sufer/pojo/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sufer/service/DoctorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sufer/service/DoctorService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sufer/service/impl/DoctorServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sufer/service/impl/DoctorServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/DoctorMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/DoctorMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/new_record.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/new_record.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/page-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/page-info.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +43,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../javamaven/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="F:\Maven\space\MavenRepository\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1d03CVPxETkL0oxh6WGNEtCAD6Y" />
   <component name="ProjectLevelVcsManager">
@@ -48,7 +75,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -61,6 +88,8 @@
   </component>
   <component name="RunManager">
     <configuration name="EmrApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="14" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.sufer.EmrApplication" />
       <module name="emr" />
       <extension name="coverage">
@@ -92,35 +121,60 @@
     </task>
     <servers />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.js" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
+    <state x="500" y="254" key="#Custom_Plugin_Repositories" timestamp="1592075519049">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="500" y="254" key="#Custom_Plugin_Repositories/0.0.1366.728@0.0.1366.728" timestamp="1592075519049" />
     <state x="163" y="0" key="#Project_Structure" timestamp="1591938572754">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="163" y="0" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1591938572754" />
-    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591801681212">
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592059100451">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1591801681212" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1591801176806">
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1592059100451" />
+    <state x="281" y="0" key="CommitChangelistDialog2" timestamp="1592064592943">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1591801176806" />
-    <state width="1323" height="27" key="GridCell.Tab.0.bottom" timestamp="1592056895269">
+    <state x="281" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1592064592943" />
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1592064591879">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="27" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592056895269" />
-    <state width="1323" height="27" key="GridCell.Tab.0.center" timestamp="1592056895269">
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1592064591879" />
+    <state x="347" y="131" key="FileChooserDialogImpl" timestamp="1592075742998">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="27" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592056895269" />
-    <state width="1323" height="27" key="GridCell.Tab.0.left" timestamp="1592056895269">
+    <state x="347" y="131" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1592075742998" />
+    <state width="1323" height="2" key="GridCell.Tab.0.bottom" timestamp="1592075032193">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="27" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592056895269" />
-    <state width="1323" height="27" key="GridCell.Tab.0.right" timestamp="1592056895269">
+    <state width="1323" height="2" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592075032193" />
+    <state width="1323" height="2" key="GridCell.Tab.0.center" timestamp="1592075032193">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="27" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592056895269" />
+    <state width="1323" height="2" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592075032193" />
+    <state width="1323" height="2" key="GridCell.Tab.0.left" timestamp="1592075032192">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="2" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592075032192" />
+    <state width="1323" height="2" key="GridCell.Tab.0.right" timestamp="1592075032193">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="2" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592075032193" />
     <state width="1323" height="230" key="GridCell.Tab.1.bottom" timestamp="1592056490938">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -137,10 +191,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="230" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1592056490938" />
-    <state x="163" y="0" key="SettingsEditor" timestamp="1592049727447">
+    <state x="213" y="18" key="Maven.ArtifactSearchDialog" timestamp="1592058984135">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1592049727447" />
+    <state x="213" y="18" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1592058984135" />
+    <state x="129" y="0" key="SettingsEditor" timestamp="1592075747449">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="129" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1592075747449" />
+    <state x="401" y="150" key="git4idea.merge.GitPullDialog" timestamp="1592058398563">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="401" y="150" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1592058398563" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1591892898650">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

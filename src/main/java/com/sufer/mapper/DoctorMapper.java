@@ -13,4 +13,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface DoctorMapper {
     int addDoctor(Doctor doctor);
+    Doctor selectDoctorByUserId(Integer userId);
 }

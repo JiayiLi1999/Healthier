@@ -17,5 +17,7 @@ public interface UserMapper {
 
     User selectPasswordByName(String userName, String password);
     User selectPasswordByEmail(String userEmail, String password);
+    User selectUserById(Integer userId);
+    int updatePassword(String userEmail,String newPassword);
     int addUser(User user);
 }

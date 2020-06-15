@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sufer.mapper.DoctorMapper">
     <resultMap id="DoctorMapping" type="Doctor">
-        <id column="doctor_id" property="doctorId"></id>
+        <id column="id" property="doctorId"></id>
         <result column="doctor_name" property="doctorName"></result>
         <result column="gender" property="gender"></result>
         <result column="birthday" property="birthday"></result>
@@ -34,12 +34,17 @@
         <parameter resultMap="office" property="office"></parameter>
         <parameter resultMap="web_page" property="webPage"></parameter>
         <parameter resultMap="introduction" property="introduction"></parameter>
+        <parameter resultMap="user_id" property="user.userId"></parameter>
     </parameterMap>
 
     <insert id="addDoctor" keyProperty="doctorId" useGeneratedKeys="true" parameterType="Doctor" parameterMap="DoctorParaMapping">
-        insert into doctor(doctor_name, gender, birthday, education, mark, address, hospital_name, phone_number,email, position,web_page,introduction)
-        values (#{doctorName} , #{gender}, #{birthday}, #{education},#{mark}, #{address}, #{hospitalName}, #{phoneNumber}, #{email},#{position}, #{webPage},#{introduction})
+        insert into doctor(doctor_name, gender, birthday, education, mark, address, hospital_name, phone_number,email,position,office,web_page,introduction,user_id)
+        values (#{doctorName} , #{gender}, #{birthday}, #{education},#{mark}, #{address}, #{hospitalName}, #{phoneNumber}, #{email},#{position},#{office}, #{webPage},#{introduction},#{user.userId})
     </insert>
 
+    <select id="selectDoctorByUserId" resultType="Doctor" resultMap="DoctorMapping">
+        select * from doctor
+        where user_id = #{userId}
+    </select>
 
 </mapper>

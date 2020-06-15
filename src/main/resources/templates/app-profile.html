@@ -263,22 +263,22 @@
 												<div class="user-work">
 													<h4>简介</h4>
 													<div class="work-content">
-														<h3>呼吸科副主治医师</h3>
+														<h3 th:text="${session.doctor.getPosition()}"></h3>
 													</div>
 													<div class="work-content">
-														<p>毕业于华西医科大学，理论基础扎实，从事呼吸科临床4年，具有丰富的临床经验，擅长慢性阻塞性肺病、哮喘、肺部感染性疾病、呼吸衰竭等呼吸系统疾病的诊治。</p>
+														<p th:text="${session.doctor.getIntroduction()}"></p>
 													</div>
 												</div>
 											</div>
 											<div class="col-lg-7">
-												<div class="user-profile-name">王瑾</div>
-												<div class="user-Location"><i class="ti-location-pin"></i> 上海市静安区</div>
-												<div class="user-job-title">上海市鞋盒医院</div>
+												<div class="user-profile-name" th:text="${session.doctor.getDoctorName()}"></div>
+												<div class="user-Location"><i class="ti-location-pin"></i>[[${session.doctor.getAddress()}]]</div>
+												<div class="user-job-title" th:text="${session.doctor.getHospitalName()}"></div>
 												<div class="ratings">
-                                                    <h4>员工ID：2017111</h4>
+                                                    <h4>员工id:<span>[[${session.doctor.getDoctorId()}]]</span></h4>
 													<h4>评分</h4>
 													<div class="rating-star">
-														<span>8.9</span>
+														<span th:text="${session.doctor.getMark()}"></span>
 														<i class="ti-star color-primary"></i>
 														<i class="ti-star color-primary"></i>
 														<i class="ti-star color-primary"></i>
@@ -297,34 +297,34 @@
 																<h4>基本信息</h4>
 																<div class="birthday-content">
 																	<span class="contact-title">出生年月:</span>
-																	<span class="birth-date">1990-1-31 </span>
+																	<span class="birth-date" th:text="${session.doctor.getBirthday()}"> </span>
 																</div>
 																<div class="gender-content">
 																	<span class="contact-title">性别:</span>
-																	<span class="gender">女</span>
+																	<span class="gender" th:text="${session.doctor.getGender()}"></span>
 																</div>
                                                                 <div class="gender-content">
 																	<span class="contact-title">学历:</span>
-																	<span class="gender">硕士</span>
+																	<span class="gender" th:text="${session.doctor.getEducation()}"></span>
 																</div>
 															</div>
 															<div class="contact-information">
 																<h4>联系方式</h4>
 																<div class="phone-content">
 																	<span class="contact-title">工作电话:</span>
-																	<span class="phone-number">+86016295998359</span>
+																	<span class="phone-number" th:text="${session.doctor.getPhoneNumber()}"></span>
 																</div>
 																<div class="address-content">
 																	<span class="contact-title">办公室:</span>
-																	<span class="mail-address">门诊楼4层402室</span>
+																	<span class="mail-address" th:text="${session.doctor.getOffice()}"></span>
 																</div>
 																<div class="email-content">
 																	<span class="contact-title">工作邮箱:</span>
-																	<span class="contact-email">hello@vuejsadmin.com</span>
+																	<span class="contact-email" th:text="${session.doctor.getEmail()}"></span>
 																</div>
 																<div class="website-content">
 																	<span class="contact-title">个人网页:</span>
-																	<span class="contact-website">www.vuejsadmin.com</span>
+																	<span class="contact-website" th:text="${session.doctor.getWebPage()}"></span>
 																</div>
 															</div>
 														</div>

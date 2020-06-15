@@ -59,4 +59,10 @@ public class RecordController {
         model.addAttribute("msg","新建病例成功!");
         return "redirect:/new_record";
     }
+
+    @RequestMapping("/newRecords")
+    public String newRecords(Model model){
+
+        return "new_record";
+    }
 }

@@ -1,6 +1,8 @@
 package com.sufer.controller;
 
+import com.sufer.mapper.UserMapper;
 import com.sufer.pojo.Doctor;
+import com.sufer.pojo.User;
 import com.sufer.service.DoctorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,6 +23,8 @@ import com.sufer.pojo.Doctor;
 public class DoctorController {
     @Autowired
     private DoctorService doctorService;
+    @Autowired
+    private UserMapper userMapper;
 
     @RequestMapping("/newInfo")
     public String newInfo(@RequestParam("doctor_name")String doctorName,
@@ -38,13 +42,11 @@ public class DoctorController {
                             @RequestParam("introduction")String introduction,
                             HttpSession session,
                             Model model, HttpServletResponse response) throws IOException {
-        System.out.println("running_doctor");
-        Doctor doctor = new Doctor(0,doctorName,gender,birthday,education,mark,address,hospitalName,phoneNumber,email,position,office,webPage,introduction);
-        System.out.println(doctor);
+        Integer userid = (Integer) session.getAttribute("userid");
+        User user = userMapper.selectUserById(userid);
+
+        Doctor doctor = new Doctor(0,doctorName,gender,birthday,education,mark,address,hospitalName,phoneNumber,email,position,office,webPage,introduction,user);
         int d = doctorService.addDoctor(doctor);
-        System.out.println("d = " + d);
-        //session.setAttribute("msg","注册成功!");
-//        model.addAttribute("msg","注册成功!");
-        return "redirect:/index";
+        return "redirect:/page-login";
     }
 }

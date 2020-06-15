@@ -31,9 +31,11 @@ public class PatientController {
 
         String doctorId = request.getParameter("doctor-id");
 
-        Collection<Patient> patients = patientService.selectPatientByDoctorId(Integer.parseInt(doctorId));
+        if (!doctorId.isEmpty()){
+            Collection<Patient> patients = patientService.selectPatientByDoctorId(Integer.parseInt(doctorId));
+            model.addAttribute("patients",patients);
+        }
 
-        model.addAttribute("patients",patients);
 
         return "search_personalInfo";
     }

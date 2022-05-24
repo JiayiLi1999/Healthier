@@ -1,5 +1,6 @@
 package com.sufer.controller;
 
+import com.sufer.pojo.Patient;
 import com.sufer.pojo.Prescription;
 import com.sufer.service.PrescriptionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,9 +9,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.Collection;
 
 /**
  * PrescriptionController
@@ -45,4 +48,19 @@ public class PrescriptionController {
         model.addAttribute("msg","新建处方成功!");
         return "redirect:/new_prescription";
     }
+
+    @RequestMapping("/selectPrescription")
+    public String selectPrescription(
+            @RequestParam(name="patient-id")Integer patientId,
+            HttpServletRequest request, Model model){
+
+        System.out.println(patientId);
+        Collection<Prescription> Prescriptions = prescriptionService.selectPrescriptionByPatientId(patientId);
+        model.addAttribute("prescriptions",Prescriptions);
+
+
+
+        return "search_prescription";
+    }
+    
 }

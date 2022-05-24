@@ -254,26 +254,13 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="card alert">
-                                <form>
+                                <form th:action="@{/selectPrescription}">
                                     <div class="form_block">
                                         <h4>按病人搜索</h4>
                                         <div class="col-lg-12">
                                             <div class="form-group">
                                                 <label> 病人ID </label>
-                                                <input type="text" size="8" class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form_block">
-                                        <h4>按药品搜索</h4>
-                                        <div class="col-lg-12">
-                                            <div class="form-group">
-                                                <label> 药品名称 </label>
-                                                <input type="text" size="16" class="form-control">
-                                            </div>
-                                            <div class="form-group">
-                                                <label> 药品ID </label>
-                                                <input type="text" size="8" class="form-control">
+                                                <input name="patient-id" type="text" size="8" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -301,85 +288,16 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>阿司匹林</td>
-                                            <td>1203</td>
-                                            <td>2</td>
-                                            <td>一日三次</td>
-                                            <td>7</td>
-                                            <td>15</td>
-                                            <td>30</td>
-                                            <td>无</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>感康</td>
-                                            <td>1123</td>
-                                            <td>3</td>
-                                            <td>一日三次</td>
-                                            <td>12</td>
-                                            <td>33</td>
-                                            <td>99</td>
-                                            <td>无</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>莫西沙</td>
-                                            <td>213</td>
-                                            <td>4</td>
-                                            <td>一日一次</td>
-                                            <td>28</td>
-                                            <td>20</td>
-                                            <td>80</td>
-                                            <td>无</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <table class="table table-responsive table-bordered">
-                                    <h4>按药品</h4>
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>药品名称</th>
-                                            <th>药品ID</th>
-                                            <th>病人ID</th>
-                                            <th>病人名称</th>
-                                            <th>疾病分类</th>
-                                            <th>症状</th>
-                                            <th>发病日期</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>阿司匹林</td>
-                                            <td>1203</td>
-                                            <td>22031</td>
-                                            <td>王伟</td>
-                                            <td>呼吸科</td>
-                                            <td>呼吸道感染</td>
-                                            <td>2019.4.11</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>阿司匹林</td>
-                                            <td>1203</td>
-                                            <td>2231</td>
-                                            <td>赵斌</td>
-                                            <td>泌尿科</td>
-                                            <td>尿道道感染</td>
-                                            <td>2019.4.11</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>阿司匹林</td>
-                                            <td>1203</td>
-                                            <td>23013</td>
-                                            <td>李畅</td>
-                                            <td>神经内科</td>
-                                            <td>脑卒中</td>
-                                            <td>2019.3.23</td>
+                                        <tr th:each="prescription:*{prescriptions}">
+                                            <td th:text="${prescription.getPrescriptionId()}"></td>
+                                            <td th:text="${prescription.getMedicineName()}"></td>
+                                            <td th:text="${prescription.getMedicineId()}"></td>
+                                            <td th:text="${prescription.getMedicineNum()}"></td>
+                                            <td th:text="${prescription.getMedicineFrequency()}"></td>
+                                            <td th:text="${prescription.getMedicineDay()}"></td>
+                                            <td th:text="${prescription.getMedicineSinglePrice()}"></td>
+                                            <td th:text="${prescription.getMedicineTotalPrice()}"></td>
+                                            <td th:text="${prescription.getComment()}"></td>
                                         </tr>
                                     </tbody>
                                 </table>

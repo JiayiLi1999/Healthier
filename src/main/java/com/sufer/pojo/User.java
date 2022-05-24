@@ -19,6 +19,7 @@ public class User {
     private String userEmail;
     private boolean userType;
 
+
     @Override
     public String toString() {
         return "User{" +

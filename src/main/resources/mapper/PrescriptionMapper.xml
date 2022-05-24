@@ -35,4 +35,9 @@
         insert into prescription(patient_id, doctor_id, medicine_name, medicine_id, medicine_num, medicine_frequency, medicine_day, medicine_single_price,medicine_total_price, comment)
         values (#{patientId} , #{doctorId}, #{medicineName}, #{medicineId},#{medicineNum}, #{medicineFrequency}, #{medicineDay}, #{medicineSinglePrice}, #{medicineTotalPrice},#{comment})
     </insert>
+
+    <select id="selectPrescriptionByPatientId" resultType="Prescription" resultMap="PrescriptionMapping">
+        select * from prescription
+        where patient_id = (#{patientId})
+    </select>
 </mapper>

@@ -39,6 +39,7 @@
 							<a th:href="@{index}"><span>小康——电子病历管理系统</span></a>
 						</div>
 						<div class="login-form">
+							<p style="color: red" th:text="${session.registersuccessed}" th:if="${not #strings.isEmpty(session.registersuccessed)}"></p>
 							<h4>个人信息登录</h4>
 							<form th:action="@{/newInfo}">
 								<div>

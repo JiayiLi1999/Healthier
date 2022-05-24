@@ -2,8 +2,9 @@
 spring:
   datasource:
     username: root
-    password: 123456
-    url: jdbc:mysql://49.235.34.160:3306/myerm?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    password: Ajia990817990817@
+    url: jdbc:mysql://localhost:3306/shopping?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+#    url: jdbc:mysql://49.235.34.160:3306/myerm?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 #mybatis配置

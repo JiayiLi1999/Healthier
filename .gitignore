@@ -11,3 +11,4 @@ target/
 *.iml
 .idea/
 work/
+.idea/workspace.xml

@@ -37,7 +37,7 @@ public class UserController {
         Doctor doctor = doctorService.selectDoctorByUserId(user.getUserId());
         if ( user != null){
             //登录成功！
-            System.out.println(doctor.getDoctorId());
+//            System.out.println(doctor.getDoctorId());
 
             session.setAttribute("username",user.getUserName());
             //

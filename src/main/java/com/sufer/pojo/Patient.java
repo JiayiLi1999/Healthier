@@ -15,37 +15,23 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Patient {
     private int patientId;
-    private String patientName;
+    private String firstName;
+    private String lastName;
     private int doctorId;
     private String gender;
     private int age;
     private String contact;
-    private String IDCardNo;
+    private String SSN;
+    private String address;
     private String addressCity;
-    private String addressDistrict;
-    private String addressStreet;
+    private String addressState;
+    private String addressCountry;
+    private String addressCode;
     private String relatedName;
     private String relatedPhoneNumber;
     private double height;
     private int weight;
 
 
-    @Override
-    public String toString() {
-        return "Patient{" +
-                "patientId=" + patientId +
-                ", patientName='" + patientName + '\'' +
-                ", gender=" + gender +
-                ", age=" + age +
-                ", contact='" + contact + '\'' +
-                ", IDCardNo='" + IDCardNo + '\'' +
-                ", addressCity='" + addressCity + '\'' +
-                ", addressDistrict='" + addressDistrict + '\'' +
-                ", addressStreet='" + addressStreet + '\'' +
-                ", relatedName='" + relatedName + '\'' +
-                ", relatedPhoneNumber='" + relatedPhoneNumber + '\'' +
-                ", height=" + height +
-                ", weight=" + weight +
-                '}';
-    }
+
 }

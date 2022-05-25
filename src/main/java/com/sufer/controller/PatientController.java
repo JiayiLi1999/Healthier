@@ -41,23 +41,27 @@ public class PatientController {
     }
 
     @RequestMapping("/newPatient")
-    public String newPatient(@RequestParam(name="patient_name")String patientName,
-                             @RequestParam(name="doctor_id")Integer doctorId,
-                             @RequestParam(name="gender")String gender,
-                             @RequestParam(name="age")Integer age,
-                             @RequestParam(name="contact")String contact,
-                             @RequestParam(name="IDcard_No")String IDCardNo,
-                             @RequestParam(name="city")String addressCity,
-                             @RequestParam(name="district")String addressDistrict,
-                             @RequestParam(name="street")String addressStreet,
-                             @RequestParam(name="related_name")String relatedName,
-                             @RequestParam(name="related_phonenumber")String relatedPhoneNumber,
-                             @RequestParam(name="height")Double height,
-                             @RequestParam(name="weight")Integer weight,
+    public String newPatient(@RequestParam("first_name")String firstName,
+                             @RequestParam("last_name")String lastName,
+                             @RequestParam("doctor_id")Integer doctorId,
+                             @RequestParam("gender")String gender,
+                             @RequestParam("age")Integer age,
+                             @RequestParam("contact")String contact,
+                             @RequestParam("SSN")String SSN,
+                             @RequestParam("address")String address,
+                             @RequestParam("address_city")String addressCity,
+                             @RequestParam("address_state")String addressState,
+                             @RequestParam("address_country")String addressCountry,
+                             @RequestParam("address_code")String addressCode,
+                             @RequestParam("related_name")String relatedName,
+                             @RequestParam("related_phonenumber")String relatedPhoneNumber,
+                             @RequestParam("height")Double height,
+                             @RequestParam("weight")Integer weight,
                              HttpSession session,
                              Model model, HttpServletResponse response) throws IOException {
         System.out.println("running new_record");
-        Patient patient = new Patient(0,patientName,doctorId,gender,age,contact,IDCardNo,addressCity,addressDistrict,addressStreet,relatedName,relatedPhoneNumber,height,weight);
+        Patient patient = new Patient(0,firstName,lastName,doctorId,gender,age,contact,SSN,address,
+                addressCity,addressState,addressCountry,addressCode,relatedName,relatedPhoneNumber,height,weight);
         System.out.println(patient);
         int p = patientService.addPatient(patient);
         System.out.println("p = " + p);

@@ -30,7 +30,7 @@
         <parameter resultMap="gender" property="gender"></parameter>
         <parameter resultMap="age" property="age"></parameter>
         <parameter resultMap="contact" property="contact"></parameter>
-        <parameter resultMap="IDcard_No" property="IDCardNo"></parameter>
+        <parameter resultMap="SSN" property="SSN"></parameter>
         <parameter resultMap="address" property="address"></parameter>
         <parameter resultMap="address_city" property="addressCity"></parameter>
         <parameter resultMap="address_state" property="addressState"></parameter>

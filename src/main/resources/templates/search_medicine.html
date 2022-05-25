@@ -254,28 +254,28 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="card alert">
-                                <form th:action="@{/selectMedicine}">
+                                <form>
                                     <div class="form_block">
                                         <div class="col-lg-12">
                                             <h3>搜索条件</h3>
                                             <div class="form-group">
-                                                <label> 药品名称 </label>
-                                                <input name="medicine-name" type="text" size="16" class="form-control">
+                                                <label for="fname"> 药品名称 </label>
+                                                <input type="text" size="16" class="form-control">
                                             </div>
                                             <div class="form-group">
-                                                <label> 药品ID </label>
+                                                <label for="fname"> 药品ID </label>
                                                 <input type="text" size="8" class="form-control">
                                             </div>
                                             <div class="form-group">
-                                                <label> 药品类型 </label>
+                                                <label for="fname"> 药品类型 </label>
                                                 <input type="text" size="8" class="form-control">
                                             </div>
                                             <div class="form-group">
-                                                <label> 药品形态 </label>
+                                                <label for="fname"> 药品形态 </label>
                                                 <input type="text" size="8" class="form-control">
                                             </div>
                                             <div class="form-group">
-                                                <label> 使用方法 </label>
+                                                <label for="fname"> 使用方法 </label>
                                                 <input type="text" size="8" class="form-control">
                                             </div>
                                         </div>
@@ -303,15 +303,38 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr th:each="medicine:*{medicines}">
-                                            <td th:text="${medicine.getMedicineName()}"></td>
-                                            <td th:text="${medicine.getMedicineId()}"></td>
-                                            <td th:text="${medicine.getMedicineType()}"></td>
-                                            <td th:text="${medicine.getMedicineForm()}"></td>
-                                            <td th:text="${medicine.getUsage()}"></td>
-                                            <td th:text="${medicine.getInventory()}"></td>
-                                            <td th:text="${medicine.getPrice()}"></td>
-                                            <td th:text="${medicine.getComment()}"></td>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>感康胶囊</td>
+                                            <td>1203</td>
+                                            <td>感冒用药</td>
+                                            <td>胶囊</td>
+                                            <td>口服</td>
+                                            <td>1509</td>
+                                            <td>30</td>
+                                            <td>无</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>感康口服液</td>
+                                            <td>1204</td>
+                                            <td>感冒用药</td>
+                                            <td>口服液</td>
+                                            <td>口服</td>
+                                            <td>211</td>
+                                            <td>45</td>
+                                            <td>无</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>感康头疼贴</td>
+                                            <td>1205</td>
+                                            <td>感冒用药</td>
+                                            <td>贴片</td>
+                                            <td>贴</td>
+                                            <td>10</td>
+                                            <td>20</td>
+                                            <td>无</td>
                                         </tr>
                                     </tbody>
                                 </table>

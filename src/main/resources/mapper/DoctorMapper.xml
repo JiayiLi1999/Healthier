@@ -5,41 +5,52 @@
 <mapper namespace="com.sufer.mapper.DoctorMapper">
     <resultMap id="DoctorMapping" type="Doctor">
         <id column="id" property="doctorId"></id>
-        <result column="doctor_name" property="doctorName"></result>
+        <result column="first_name" property="firstName"></result>
+        <result column="last_name" property="lastName"></result>
         <result column="gender" property="gender"></result>
-        <result column="birthday" property="birthday"></result>
-        <result column="education" property="education"></result>
-        <result column="mark" property="mark"></result>
+        <result column="birth_year" property="birthYear"></result>
+        <result column="birth_month" property="birthMonth"></result>
+        <result column="birth_date" property="birthDate"></result>
+        <result column="education_level" property="educationLevel"></result>
+        <result column="grading" property="grading"></result>
         <result column="address" property="address"></result>
-        <result column="hospital_name" property="hospitalName"></result>
+        <result column="address_city" property="addressCity"></result>
+        <result column="address_state" property="addressState"></result>
+        <result column="address_country" property="addressCountry"></result>
+        <result column="address_code" property="addressCode"></result>
+        <result column="hospital_id" property="hospitalId"></result>
         <result column="phone_number" property="phoneNumber"></result>
         <result column="email" property="email"></result>
         <result column="position" property="position"></result>
-        <result column="office" property="office"></result>
         <result column="web_page" property="webPage"></result>
         <result column="introduction" property="introduction"></result>
     </resultMap>
 
     <parameterMap id="DoctorParaMapping" type="Doctor">
-        <parameter resultMap="doctor_name" property="doctorName"></parameter>
+        <parameter resultMap="first_name" property="firstName"></parameter>
+        <parameter resultMap="last_name" property="lastName"></parameter>
         <parameter resultMap="gender" property="gender"></parameter>
-        <parameter resultMap="birthday" property="birthday"></parameter>
-        <parameter resultMap="education" property="education"></parameter>
-        <parameter resultMap="mark" property="mark"></parameter>
+        <parameter resultMap="birth_year" property="birthYear"></parameter>
+        <parameter resultMap="birth_month" property="birthMonth"></parameter>
+        <parameter resultMap="birth_date" property="birthDate"></parameter>
+        <parameter resultMap="education_level" property="educationLevel"></parameter>
+        <parameter resultMap="grading" property="grading"></parameter>
         <parameter resultMap="address" property="address"></parameter>
-        <parameter resultMap="hospital_name" property="hospitalName"></parameter>
+        <parameter resultMap="address_city" property="addressCity"></parameter>
+        <parameter resultMap="address_state" property="addressState"></parameter>
+        <parameter resultMap="address_country" property="addressCountry"></parameter>
+        <parameter resultMap="address_code" property="addressCode"></parameter>        <parameter resultMap="hospital_name" property="hospitalName"></parameter>
         <parameter resultMap="phone_number" property="phoneNumber"></parameter>
         <parameter resultMap="email" property="email"></parameter>
         <parameter resultMap="position" property="position"></parameter>
-        <parameter resultMap="office" property="office"></parameter>
         <parameter resultMap="web_page" property="webPage"></parameter>
         <parameter resultMap="introduction" property="introduction"></parameter>
         <parameter resultMap="user_id" property="user.userId"></parameter>
     </parameterMap>
 
     <insert id="addDoctor" keyProperty="doctorId" useGeneratedKeys="true" parameterType="Doctor" parameterMap="DoctorParaMapping">
-        insert into doctor(doctor_name, gender, birthday, education, mark, address, hospital_name, phone_number,email,position,office,web_page,introduction,user_id)
-        values (#{doctorName} , #{gender}, #{birthday}, #{education},#{mark}, #{address}, #{hospitalName}, #{phoneNumber}, #{email},#{position},#{office}, #{webPage},#{introduction},#{user.userId})
+        insert into doctor(first_name,last_name, gender, birth_year,birth_month,birth_date, education_level, grading, address,address_city, address_state, address_country,address_code, phone_number,email,position ,web_page,introduction,user_id)
+        values (#{firstName},#{lastName} , #{gender}, #{birthYear}, #{birthMonth}, #{birthDate}, #{educationLevel},#{grading}, #{address}, #{addressCity},#{addressState},#{addressCountry},#{addressCode},#{phoneNumber}, #{email},#{position}, #{webPage},#{introduction},#{user.userId})
     </insert>
 
     <select id="selectDoctorByUserId" resultType="Doctor" resultMap="DoctorMapping">

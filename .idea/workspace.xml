@@ -23,13 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84152984-2760-4c6b-9e99-b5332ef6002c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/page-register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/page-register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/search_medicine.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/search_medicine.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/search_prescription.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/search_prescription.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/search_record.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/search_record.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/page-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/page-info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sufer/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sufer/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/DoctorMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DoctorMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/MyMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/PatientMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/PatientMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/PrescriptionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/PrescriptionMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +142,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8aa32a7b-debd-42b6-aaf2-eee2ca2229cf" name="Default Changelist" comment="" />
+      <changelist id="84152984-2760-4c6b-9e99-b5332ef6002c" name="Changes" comment="" />
       <created>1591548055949</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -151,6 +150,8 @@
       <workItem from="1653361552801" duration="517000" />
       <workItem from="1653369792005" duration="5402000" />
       <workItem from="1653434341624" duration="2022000" />
+      <workItem from="1653465437723" duration="22000" />
+      <workItem from="1653465468338" duration="1089000" />
     </task>
     <servers />
   </component>
@@ -180,21 +181,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/sufer/controller/UserController.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/sufer/controller/UserController.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

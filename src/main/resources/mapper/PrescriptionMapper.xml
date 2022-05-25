@@ -8,32 +8,26 @@
         <result column="patient_name" property="patientName"></result>
         <result column="patient_id" property="patientId"></result>
         <result column="doctor_id" property="doctorId"></result>
-        <result column="medicine_name" property="medicineName"></result>
         <result column="medicine_id" property="medicineId"></result>
         <result column="medicine_num" property="medicineNum"></result>
         <result column="medicine_frequency" property="medicineFrequency"></result>
         <result column="medicine_day" property="medicineDay"></result>
-        <result column="medicine_single_price" property="medicineSinglePrice"></result>
-        <result column="medicine_total_price" property="medicineTotalPrice"></result>
         <result column="comment" property="comment"></result>
     </resultMap>
 
     <parameterMap id="PrescriptionParaMapping" type="Prescription">
         <parameter resultMap="patient_id" property="patientId"></parameter>
         <parameter resultMap="doctor_id" property="doctorId"></parameter>
-        <parameter resultMap="medicine_name" property="medicineName"></parameter>
         <parameter resultMap="medicine_id" property="medicineId"></parameter>
         <parameter resultMap="medicine_num" property="medicineNum"></parameter>
         <parameter resultMap="medicine_frequency" property="medicineFrequency"></parameter>
         <parameter resultMap="medicine_day" property="medicineDay"></parameter>
-        <parameter resultMap="medicine_single_price" property="medicineSinglePrice"></parameter>
-        <parameter resultMap="medicine_total_price" property="medicineTotalPrice"></parameter>
         <parameter resultMap="comment" property="comment"></parameter>
     </parameterMap>
 
     <insert id="addPrescription" keyProperty="prescriptionId" useGeneratedKeys="true" parameterType="Prescription" parameterMap="PrescriptionParaMapping">
-        insert into prescription(patient_id, doctor_id, medicine_name, medicine_id, medicine_num, medicine_frequency, medicine_day, medicine_single_price,medicine_total_price, comment)
-        values (#{patientId} , #{doctorId}, #{medicineName}, #{medicineId},#{medicineNum}, #{medicineFrequency}, #{medicineDay}, #{medicineSinglePrice}, #{medicineTotalPrice},#{comment})
+        insert into prescription(patient_id, doctor_id, medicine_id, medicine_num, medicine_frequency, medicine_day, comment)
+        values (#{patientId} , #{doctorId},  #{medicineId},#{medicineNum}, #{medicineFrequency}, #{medicineDay},#{comment})
     </insert>
 
     <select id="selectPrescriptionByPatientId" resultType="Prescription" resultMap="PrescriptionMapping">

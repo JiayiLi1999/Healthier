@@ -34,15 +34,15 @@ public class UserController {
                             HttpSession session,
                             Model model){
         User user = userService.selectPasswordByEmail(userEmail, password);
-        Doctor doctor = doctorService.selectDoctorByUserId(user.getUserId());
+//        Doctor doctor = doctorService.selectDoctorByUserId(user.getUserId());
         if ( user != null){
             //登录成功！
 //            System.out.println(doctor.getDoctorId());
 
             session.setAttribute("username",user.getUserName());
             //
-            session.setAttribute("doctor",doctor);
-            //登录成功！防止表单重复提交，我们重定向
+//            session.setAttribute("doctor",doctor);
+            //登录成功！防止表单重复提交，我们重定向xx
             return "redirect:/index";
         }else {
             //登录失败！存放错误信息

@@ -39,23 +39,22 @@
         <parameter resultMap="address_city" property="addressCity"></parameter>
         <parameter resultMap="address_state" property="addressState"></parameter>
         <parameter resultMap="address_country" property="addressCountry"></parameter>
-        <parameter resultMap="address_code" property="addressCode"></parameter>        <parameter resultMap="hospital_name" property="hospitalName"></parameter>
+        <parameter resultMap="address_code" property="addressCode"></parameter>
         <parameter resultMap="phone_number" property="phoneNumber"></parameter>
         <parameter resultMap="email" property="email"></parameter>
         <parameter resultMap="position" property="position"></parameter>
         <parameter resultMap="web_page" property="webPage"></parameter>
         <parameter resultMap="introduction" property="introduction"></parameter>
-        <parameter resultMap="user_id" property="user.userId"></parameter>
     </parameterMap>
 
     <insert id="addDoctor" keyProperty="doctorId" useGeneratedKeys="true" parameterType="Doctor" parameterMap="DoctorParaMapping">
-        insert into doctor(first_name,last_name, gender, birth_year,birth_month,birth_date, education_level, grading, address,address_city, address_state, address_country,address_code, phone_number,email,position ,web_page,introduction,user_id)
-        values (#{firstName},#{lastName} , #{gender}, #{birthYear}, #{birthMonth}, #{birthDate}, #{educationLevel},#{grading}, #{address}, #{addressCity},#{addressState},#{addressCountry},#{addressCode},#{phoneNumber}, #{email},#{position}, #{webPage},#{introduction},#{user.userId})
+        insert into doctor(first_name,last_name, gender, birth_year,birth_month,birth_date, education_level, grading, address,address_city, address_state, address_country,address_code, phone_number,email,position ,web_page,introduction)
+        values (#{firstName},#{lastName} , #{gender}, #{birthYear}, #{birthMonth}, #{birthDate}, #{educationLevel},#{grading}, #{address}, #{addressCity},#{addressState},#{addressCountry},#{addressCode},#{phoneNumber}, #{email},#{position}, #{webPage},#{introduction})
     </insert>
 
-    <select id="selectDoctorByUserId" resultType="Doctor" resultMap="DoctorMapping">
-        select * from doctor
-        where user_id = #{userId}
-    </select>
+<!--    <select id="selectDoctorByUserId" resultType="Doctor" resultMap="DoctorMapping">-->
+<!--        select * from doctor-->
+<!--        where user_id = #{userId}-->
+<!--    </select>-->
 
 </mapper>

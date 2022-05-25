@@ -27,17 +27,22 @@ public class DoctorController {
     private UserMapper userMapper;
 
     @RequestMapping("/newInfo")
-    public String newInfo(@RequestParam("doctor_name")String doctorName,
+    public String newInfo(@RequestParam("first_name")String firstName,
+                            @RequestParam("last_name")String lastName,
                             @RequestParam("gender")String gender,
-                            @RequestParam("birthday")String birthday,
-                            @RequestParam("education")String education,
-                            @RequestParam("mark")Double mark,
+                            @RequestParam("birth_year")Integer birthYear,
+                            @RequestParam("birth_month")Integer birthMonth,
+                            @RequestParam("birth_date")Integer birthDate,
+                            @RequestParam("education_level")Integer educationLevel,
+                            @RequestParam("grading")Double grading,
                             @RequestParam("address")String address,
-                            @RequestParam("hospital_name")String hospitalName,
+                            @RequestParam("address_city")String addressCity,
+                            @RequestParam("address_state")String addressState,
+                            @RequestParam("address_country")String addressCountry,
+                            @RequestParam("address_code")String addressCode,
                             @RequestParam("phone_number")String phoneNumber,
                             @RequestParam("email")String email,
                             @RequestParam("position")String position,
-                            @RequestParam("office")String office,
                             @RequestParam("web_page")String webPage,
                             @RequestParam("introduction")String introduction,
                             HttpSession session,
@@ -45,7 +50,8 @@ public class DoctorController {
         Integer userid = (Integer) session.getAttribute("userid");
         User user = userMapper.selectUserById(userid);
 
-        Doctor doctor = new Doctor(0,doctorName,gender,birthday,education,mark,address,hospitalName,phoneNumber,email,position,office,webPage,introduction,user);
+        Doctor doctor = new Doctor(-1,firstName,lastName,gender,birthYear,birthMonth,birthDate,educationLevel,grading,address,
+                addressCity,addressState,addressCountry,addressCode,phoneNumber,email,position,webPage,introduction);
         int d = doctorService.addDoctor(doctor);
         return "redirect:/page-login";
     }

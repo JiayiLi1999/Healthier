@@ -36,20 +36,26 @@
 				<div class="col-lg-6 col-lg-offset-3">
 					<div class="login-content">
 						<div class="login-logo">
-							<a th:href="@{index}"><span>小康——电子病历管理系统</span></a>
+							<a th:href="@{index}"><span>Xiaokang - electronic medical record management system</span></a>
 						</div>
 						<div class="login-form">
 							<p style="color: red" th:text="${session.registersuccessed}" th:if="${not #strings.isEmpty(session.registersuccessed)}"></p>
 							<h4>个人信息登录</h4>
 							<form th:action="@{/newInfo}">
 								<div>
-									<div class="col-lg-6">
+									<div class="col-lg-4">
 										<div class="form-group">
-											<label>姓名</label>
-											<input name="doctor_name" type="text" class="form-control" >
+											<label>First Name</label>
+											<input name="first_name" type="text" class="form-control" >
 										</div>
 									</div>
-									<div class="col-lg-6">
+									<div class="col-lg-4">
+										<div class="form-group">
+											<label>Last Name</label>
+											<input name="last_name" type="text" class="form-control" >
+										</div>
+									</div>
+									<div class="col-lg-4">
 										<div class="form-group">
 											<label>性别</label>
 											<input name="gender" type="text" class="form-control" >
@@ -57,66 +63,92 @@
 									</div>
 									<div class="col-lg-4">
 										<div class="form-group">
-											<label>出生年月</label>
-											<input name="birthday" type="text" class="form-control" >
+											<label>birthday year</label>
+											<input name="birth_year" type="text" class="form-control" >
 										</div>
 									</div>
 									<div class="col-lg-4">
 										<div class="form-group">
-											<label>学历</label>
-											<input name="education" type="text" class="form-control" >
+											<label>birthday month</label>
+											<input name="birth_month" type="text" class="form-control" >
 										</div>
 									</div>
 									<div class="col-lg-4">
 										<div class="form-group">
-											<label>评分</label>
-											<input name="mark" type="text" class="form-control" >
+											<label>birthday date</label>
+											<input name="birth_date" type="text" class="form-control" >
 										</div>
 									</div>
-									<div class="col-lg-6">
+									<div class="col-lg-4">
 										<div class="form-group">
-											<label>居所</label>
+											<label>education level</label>
+											<input name="education_level" type="text" class="form-control" >
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="form-group">
+											<label>grading</label>
+											<input name="grading" type="text" class="form-control" >
+										</div>
+									</div>
+									<div class="col-lg-12">
+										<div class="form-group">
+											<label>address</label>
 											<input name="address" type="text" class="form-control" >
 										</div>
 									</div>
 									<div class="col-lg-6">
 										<div class="form-group">
-											<label>工作单位</label>
-											<input name="hospital_name" type="text" class="form-control" >
+											<label>address city</label>
+											<input name="address_city" type="text" class="form-control" >
 										</div>
 									</div>
 									<div class="col-lg-6">
 										<div class="form-group">
-											<label>工作电话</label>
+											<label>address state</label>
+											<input name="address_state" type="text" class="form-control" >
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="form-group">
+											<label>address country</label>
+											<input name="address_country" type="text" class="form-control" >
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="form-group">
+											<label>address code</label>
+											<input name="address_code" type="text" class="form-control" >
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="form-group">
+											<label>phone number</label>
 											<input name="phone_number" type="text" class="form-control" >
 										</div>
 									</div>
 									<div class="col-lg-6">
 										<div class="form-group">
-											<label>工作邮箱</label>
+											<label>email address</label>
 											<input name="email" type="text" class="form-control" >
 										</div>
 									</div>
 									<div class="form-group">
-										<label>职位</label>
+										<label>position</label>
 										<input name="position" type="text" class="form-control" >
 									</div>
 									<div class="form-group">
-										<label>办公室</label>
-										<input name="office" type="text" class="form-control" >
-									</div>
-									<div class="form-group">
-										<label>个人网页</label>
+										<label>personal website</label>
 										<input name="web_page" type="text" class="form-control" >
 									</div>
 									<div class="form-group">
-										<label>简介</label>
+										<label>introduction</label>
 										<textarea name="introduction" rows="3" cols="130" class="form-control"></textarea>
 									</div>
 								</div>
 								<div class="form_submit">
-									<input type="submit" value="提交" class="btn btn-primary btn-flat m-b-30 m-t-30">
-									<input type="reset" value="重置" class="btn btn-primary bg-twitter btn-flat btn-addon m-t-10">
+									<input type="submit" value="Submit" class="btn btn-primary btn-flat m-b-30 m-t-30">
+									<input type="reset" value="Reset" class="btn btn-primary bg-twitter btn-flat btn-addon m-t-10">
 								</div>
 							</form>
 						</div>

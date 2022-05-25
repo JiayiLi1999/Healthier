@@ -23,12 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84152984-2760-4c6b-9e99-b5332ef6002c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sufer/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sufer/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sufer/controller/DoctorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sufer/controller/DoctorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sufer/pojo/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sufer/pojo/Doctor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/DoctorMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DoctorMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/MyMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/PatientMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/PatientMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/PrescriptionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/PrescriptionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/page-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/page-info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/page-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/page-info.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,6 +153,7 @@
       <workItem from="1653434341624" duration="2022000" />
       <workItem from="1653465437723" duration="22000" />
       <workItem from="1653465468338" duration="1089000" />
+      <workItem from="1653510359571" duration="1206000" />
     </task>
     <servers />
   </component>

@@ -1,3 +1,2 @@
-# emr
-## 小康-电子病历管理系统
-## 综合设计实验项目
+# Healthier
+ Hospital Management System using SpringBoot, MyBatis, MySQL, Spring Cloud, Nginx, HTML/CSS/JS
